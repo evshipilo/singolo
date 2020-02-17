@@ -85,7 +85,43 @@ header {
   letter-spacing: -0.1px;
 }
 .header-navigation ul li:first-child {
-  margin-left: 0px;
+  margin-left: -1px;
+  padding-right: 1px;
+}
+
+.section {
+  height: 600px;
+  background-color: #f06c64;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.left-btn {
+  position: relative;
+  top: -175px;
+  right: -36px;
+}
+
+.right-btn {
+  position: relative;
+  top: -175px;
+  right: -197px;
+}
+
+.mobile_vertical {
+  position: relative;
+  top: 53px;
+  right: -81px;
+}
+
+.mobile_horizontal {
+  position: relative;
+  top: -69px;
+  right: -151px;
 }
 
 /*# sourceMappingURL=singolo1.css.map */
