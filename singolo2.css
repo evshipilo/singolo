@@ -41,7 +41,7 @@ body {
 
 .portfolio {
   background-color: #2d303a;
-  height: 870px;
+  height: 819px;
   border-bottom: 6px solid #323746;
   padding-top: 45px;
 }
@@ -72,6 +72,12 @@ body {
   border-radius: 5px;
   margin-left: 8px;
   padding-top: 0px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.portfolio button:hover {
+  color: #dedede;
+  border: 1px solid #c5c5c5;
 }
 
 button.first-button {
@@ -97,6 +103,18 @@ button.forth-button {
   padding-right: 4px;
   padding-left: 5px;
   letter-spacing: 0.6px;
+}
+
+.gallery {
+  height: 601px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 19px;
+  overflow: hidden;
+}
+.gallery img {
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=singolo2.css.map */
