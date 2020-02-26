@@ -117,4 +117,25 @@ button.forth-button {
   margin-bottom: 20px;
 }
 
+.about-us {
+  background-color: #f2f2f2;
+  border-bottom: 6px solid #ffffff;
+  padding-top: 44px;
+}
+.about-us h1 {
+  color: #666d89;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 17.86px;
+  letter-spacing: -0.2px;
+}
+.about-us p {
+  color: #767e9e;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 9px;
+  padding-top: 2px;
+}
+
 /*# sourceMappingURL=singolo2.css.map */
