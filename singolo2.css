@@ -163,7 +163,7 @@ button.forth-button {
   font-size: 12px;
   font-weight: 400;
   line-height: 21.56px;
-  margin-top: 6px;
+  margin-top: 7px;
 }
 
 .second-foto {
@@ -172,18 +172,22 @@ button.forth-button {
 
 .wrapper-hidden {
   overflow: hidden;
-  height: 35px;
+  height: 34px;
   margin-left: -1px;
   padding-left: 1px;
 }
 
 .social-links {
-  margin-top: 25px;
+  margin-top: 24px;
 }
-.social-links img {
+
+.articles .first {
+  margin-left: 1px;
+}
+.articles img {
   margin-right: 6px;
 }
-.social-links a:hover img {
+.articles a:hover img {
   filter: brightness(30%);
   transition: 0.3s;
 }
