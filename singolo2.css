@@ -121,6 +121,7 @@ button.forth-button {
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
   padding-top: 44px;
+  height: 684px;
 }
 .about-us h1 {
   color: #666d89;
@@ -155,10 +156,36 @@ button.forth-button {
   margin-left: -1px;
   padding-top: 1px;
   letter-spacing: -0.1px;
+  word-break: break-all;
+}
+.articles article p {
+  color: #767e9e;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21.56px;
+  margin-top: 6px;
 }
 
 .second-foto {
   margin-left: -1px;
+}
+
+.wrapper-hidden {
+  overflow: hidden;
+  height: 35px;
+  margin-left: -1px;
+  padding-left: 1px;
+}
+
+.social-links {
+  margin-top: 25px;
+}
+.social-links img {
+  margin-right: 6px;
+}
+.social-links a:hover img {
+  filter: brightness(30%);
+  transition: 0.3s;
 }
 
 /*# sourceMappingURL=singolo2.css.map */
