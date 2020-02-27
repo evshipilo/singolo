@@ -1,0 +1,195 @@
+@font-face {
+  font-family: Lato;
+  src: url("assets/Lato-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato;
+  src: url("assets/Lato-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato;
+  src: url("assets/Lato-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato;
+  src: url("assets/Lato-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: Lato;
+  font-style: normal;
+  width: 1020px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.wrapper {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.portfolio {
+  background-color: #2d303a;
+  height: 819px;
+  border-bottom: 6px solid #323746;
+  padding-top: 45px;
+}
+.portfolio h1 {
+  color: #666d89;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 17.86px;
+  letter-spacing: -0.2px;
+}
+.portfolio p {
+  color: #767e9e;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 34px;
+  margin-bottom: 9px;
+}
+.portfolio button {
+  height: 22px;
+  background: none;
+  outline: none;
+  border: none;
+  color: #767e9e;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 21.56px;
+  border: 1px solid #666d89;
+  border-radius: 5px;
+  margin-left: 8px;
+  padding-top: 0px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.portfolio button:hover {
+  color: #dedede;
+  border: 1px solid #c5c5c5;
+}
+
+button.first-button {
+  margin-left: 1px;
+  width: 29px;
+}
+
+button.second-button {
+  width: 78px;
+  padding-right: 4px;
+  letter-spacing: -0.2px;
+}
+
+button.third-button {
+  width: 93px;
+  padding-right: 3px;
+  padding-left: 3px;
+  letter-spacing: -0.2px;
+}
+
+button.forth-button {
+  width: 57px;
+  padding-right: 4px;
+  padding-left: 5px;
+  letter-spacing: 0.6px;
+}
+
+.gallery {
+  height: 601px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 19px;
+  overflow: hidden;
+}
+.gallery img {
+  margin-bottom: 20px;
+}
+
+.about-us {
+  background-color: #f2f2f2;
+  border-bottom: 6px solid #ffffff;
+  padding-top: 44px;
+  height: 684px;
+}
+.about-us h1 {
+  color: #666d89;
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 17.86px;
+  letter-spacing: -0.2px;
+}
+.about-us p {
+  color: #767e9e;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 30px;
+  margin-bottom: 9px;
+  padding-top: 2px;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+.articles article {
+  width: 300px;
+}
+.articles article h2 {
+  color: #666d89;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 17.86px;
+  margin-left: -1px;
+  padding-top: 1px;
+  letter-spacing: -0.1px;
+  word-break: break-all;
+}
+.articles article p {
+  color: #767e9e;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21.56px;
+  margin-top: 7px;
+}
+
+.second-foto {
+  margin-left: -1px;
+}
+
+.wrapper-hidden {
+  overflow: hidden;
+  height: 34px;
+  margin-left: -1px;
+  padding-left: 1px;
+}
+
+.social-links {
+  margin-top: 24px;
+}
+
+.articles .first {
+  margin-left: 1px;
+}
+.articles img {
+  margin-right: 6px;
+}
+.articles a:hover img {
+  filter: brightness(30%);
+  transition: 0.3s;
+}
+
+/*# sourceMappingURL=singolo3.css.map */
