@@ -2,51 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Singolo2</title>
+	<title>Singolo3</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<link rel="stylesheet" href="singolo2.css">
+	<link rel="stylesheet" href="singolo3.css">
 
 </head>
 <body>
 
-<section class="portfolio">
+<section class="get-a-quote">
 	<div class="wrapper">
 
 		<h1>
-			Portfolio
-		</h1>
-		<p>
-			Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
-			eget lacinia odio sem nec elit.
-		</p>
-		<button class="first-button">All</button>
-		<button class="second-button">Web Design</button>
-		<button class="third-button">Graphic Design</button>
-		<button class="forth-button">Artwork</button>
-
-		<div class="gallery">
-			<img src="assets/s2-ship.jpg" alt="ship" width="220">
-			<img src="assets/s2-smile.jpg" alt="smile" width="220">
-			<img src="assets/s2-black.jpg" alt="black" width="220">
-			<img src="assets/s2-robot.jpg" alt="robot" width="220">
-			<img src="assets/s2-animals.jpg" alt="animals" width="220">
-			<img src="assets/s2-sdk.jpg" alt="sdk" width="220">
-			<img src="assets/s2-robots.jpg" alt="robots" width="220">
-			<img src="assets/s2-birds.jpg" alt="birds" width="220">
-			<img src="assets/s2-beast.jpg" alt="beast" width="220">
-			<img src="assets/s2-words.jpg" alt="words" width="220">
-			<img src="assets/s2-beast2.jpg" alt="beast" width="220">
-			<img src="assets/s2-abstract.jpg" alt="abstract" width="220">
-
-		</div>
-	</div>
-</section>
-
-<section class="about-us">
-	<div class="wrapper">
-		<h1>
-			About Us
+			Get a Quote
 		</h1>
 		<p>
 			Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -54,66 +22,57 @@
 			lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo,
 			tortor mauris condimentum nibh.
 		</p>
-		<div class="articles">
-			<article>
-				<img src="assets/s2-face1.jpg" alt="foto" width="300">
-				<div class="wrapper-hidden"><h2>Adam Jensen
-				</h2></div>
-				<p>Quisque luctus, quam eget molestie commodo, lacus purus
-					cursus purus, nec rutrum tellus dolor id lorem.</p>
-				<div class="social-links first">
-					<a href="#"><img src="assets/s2-facebook.png" alt="facebook"
-					                 width="32"></a>
-					<a href="#"><img src="assets/s2-google.png" alt="google"
-					                 width="32"></a>
-					<a href="#"><img src="assets/s2-twitter.png" alt="twitter"
-					                 width="32"></a>
-					<a href="#"><img src="assets/s2-linkedin.png" alt="linked"
-					                 width="32"></a>
-				</div>
-			</article>
-			<article>
-				<img class="second-foto" src="assets/s2-face2.jpg" alt="foto"
-				     width="300">
-				<div
-						class="wrapper-hidden"><h2>Desmond
-					Miles</h2></div>
-				<p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in
-					quam
-					laoreet, viverra lacus ut, ultrices velit.</p>
-				<div class="social-links">
-					<a href="#"><img src="assets/s2-facebook.png" alt="facebook"
-					                 width="32"></a>
-					<a href="#"><img src="assets/s2-google.png" alt="google"
-					                 width="32"></a>
-					<a href="#"><img src="assets/s2-twitter.png" alt="twitter"
-					                 width="32"></a>
-					<a href="#"><img src="assets/s2-linkedin.png" alt="linked"
-					                 width="32"></a>
-				</div>
-			</article>
-			<article>
-				<img src="assets/s2-face3.jpg" alt="foto" width="300">
-				<div
-						class="wrapper-hidden"><h2>Scolara
-					Visari</h2></div>
-				<p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
-					turpis,
-					et consequat felis. Quisque condimentum.</p>
-				<div class="social-links">
-					<a href="#"><img src="assets/s2-facebook.png" alt="facebook"
-					                 width="32"></a>
-					<a href="#"><img src="assets/s2-google.png" alt="google"
-					                 width="32"></a>
-					<a href="#"><img src="assets/s2-twitter.png" alt="twitter"
-					                 width="32"></a>
-					<a href="#"><img src="assets/s2-linkedin.png" alt="linked"
-					                 width="32"></a>
-				</div>
-			</article>
+
+<div class="form-block">
+		<fildset class="form-wrapper">
+			<form action="/contactInfo" method="post">
+				<input type="text" name="name" placeholder="Name (Required)"
+				       required>
+				<input type="email" name="email" placeholder="Email (Required)"
+				       required autocomplete="off">
+				<input type="text" name="subject" placeholder="Subject">
+				<textarea name="detail" placeholder="Describe your project in detail..."
+				          id="describe" cols="30" rows="10"></textarea>
+			</form>
+
+		</fildset>
+
+		<div class="contact-wrapper">
+			<h2>Contact Information</h2>
+			<p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
+				Fusce vitae
+				aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc
+				et tortor
+				luctus faucibus. Morbi at aliquet turpis, et consequat
+				felis.</p>
+			<img src="assets/s3-location.png" alt="location" width="7">
+			<p> Elm St. 14/05 Lost City </p>
+			<img src="assets/s3-phone.png" alt="phone" width="11">
+			<p> 03528 331 86 35 </p>
+			<img src="assets/s3-mail.png" alt="mail" width="13">
+			<p>info@singolo.com</p>
 		</div>
+</div>
+
 	</div>
 </section>
+
+<footer class="footer">
+	<div class="wrapper">
+		<div class="copyright">© Copyright 2013</div>
+		<div class="link-section">
+			<a href="#"><img src="assets/s2-facebook.png" alt="facebook"
+			                 width="32"></a>
+			<a href="#"><img src="assets/s2-google.png" alt="google"
+			                 width="32"></a>
+			<a href="#"><img src="assets/s2-twitter.png" alt="twitter"
+			                 width="32"></a>
+			<a href="#"><img src="assets/s2-linkedin.png" alt="linked"
+			                 width="32"></a>
+		</div>
+
+	</div>
+</footer>
 
 
 </body>
