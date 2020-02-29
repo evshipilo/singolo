@@ -24,15 +24,15 @@
 		</p>
 
 		<div class="form-block">
-			<fildset class="form-wrapper">
-				<form action="/contactInfo" method="post">
+			<div class="form-wrapper">
+				<form action="http://ya.ru" method="post">
 					<input pattern="^[А-ЯA-Zа-яa-z -]{2,40}$"
-					       name="name"
+					       name="name" type="text"
 					       title="example: Peter Smith"
 					       autocomplete="off"
 					       placeholder="Name (Required)"
 					       required>
-					<input name="email" title="example: peter@gmail.com"
+					<input name="email" title="example: peter@gmail.com" type="email"
 					       pattern="^[a-zA-Zа-яА-Я0-9!#$%&'*+/=?^_`{|}~-]{1,20}@[a-zA-Zа-яА-я0-9-]{1,15}[.][a-zA-Zа-яА-я0-9]{1,10}$"
 					       placeholder="Email (Required)"
 					       required autocomplete="off">
@@ -43,7 +43,7 @@
 					<input type="submit" name="submit" value="submit">
 				</form>
 
-			</fildset>
+			</div>
 
 			<div class="contact-wrapper">
 				<h3>Contact Information</h3>
@@ -59,11 +59,14 @@
 				                      alt="location"
 				           width="7">
 					<span> Elm St. 14/05 Lost City </span></div>
-				<div class="phone"><img src="assets/s3-phone.png" alt="phone"
+				<div class="phone"><a href="tel:+035283318635"><img
+						src="assets/s3-phone.png" alt="phone"
 				                    width="11">
-					<span > 03528 331 86 35 </span></div>
-				<div class="mail"><img src="assets/s3-mail.png" alt="mail" width="13">
-					<span>info@singolo.com</span></div>
+					<span > 03528 331 86 35 </span></a></div>
+				<div class="mail"><a href="mailto:info@singolo.com"><img
+						src="assets/s3-mail.png" alt="mail"
+				                        width="13">
+					<span>info@singolo.com</span></a></div>
 			</div>
 		</div>
 

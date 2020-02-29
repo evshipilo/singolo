@@ -96,20 +96,7 @@ form input::placeholder {
   opacity: 1;
   transition: opacity 0.3s ease;
 }
-form input::-moz-placeholder {
-  color: #f48c8f;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 23px;
-  letter-spacing: -0.3px;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
 form input:focus::placeholder {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-form input:focus::-moz-placeholder {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -156,21 +143,7 @@ form textarea::placeholder {
   transition: opacity 0.3s ease;
   letter-spacing: 0.1px;
 }
-form textarea::-moz-placeholder {
-  font-family: Lato;
-  color: #f48c8f;
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 23px;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-  letter-spacing: 0.1px;
-}
 form textarea:focus::placeholder {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-form textarea:focus::-moz-placeholder {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -200,6 +173,13 @@ form textarea:focus::-moz-placeholder {
   font-size: 12px;
   font-weight: 400;
   line-height: 21.56px;
+}
+.contact-wrapper div a {
+  color: #f0d8d9;
+  text-decoration: none;
+}
+.contact-wrapper div a:hover {
+  color: #f2f2f2;
 }
 
 .location {
