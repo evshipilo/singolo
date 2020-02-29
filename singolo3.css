@@ -96,9 +96,39 @@ form input::placeholder {
   opacity: 1;
   transition: opacity 0.3s ease;
 }
+form input::-moz-placeholder {
+  color: #f48c8f;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: -0.3px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
 form input:focus::placeholder {
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+form input:focus::-moz-placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+form input[name=submit] {
+  width: 100px;
+  padding-left: 5px;
+  cursor: pointer;
+  border: none;
+  transition: border 0.3s ease;
+}
+form input[name=submit]:hover {
+  border: 1px solid #f48c8f;
+  transition: border 0.3s ease;
+}
+form input:invalid {
+  color: #666d89;
+}
+form input:valid {
+  color: #f0d8d9;
 }
 form textarea {
   font-family: Lato;
@@ -126,7 +156,21 @@ form textarea::placeholder {
   transition: opacity 0.3s ease;
   letter-spacing: 0.1px;
 }
+form textarea::-moz-placeholder {
+  font-family: Lato;
+  color: #f48c8f;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 23px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  letter-spacing: 0.1px;
+}
 form textarea:focus::placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+form textarea:focus::-moz-placeholder {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -201,6 +245,10 @@ form textarea:focus::placeholder {
 
 .link-section a {
   margin-left: 6px;
+}
+.link-section a:hover {
+  filter: invert(100%);
+  transition: 0.3s;
 }
 
 /*# sourceMappingURL=singolo3.css.map */
