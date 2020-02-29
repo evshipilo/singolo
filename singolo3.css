@@ -41,7 +41,7 @@ body {
 
 .get-a-quote {
   background-color: #f06c64;
-  height: 648px;
+  height: 604px;
   border-bottom: 6px solid #ea676b;
   padding-top: 44px;
 }
@@ -131,79 +131,76 @@ form textarea:focus::placeholder {
   transition: opacity 0.3s ease;
 }
 
-.about-us {
-  background-color: #f2f2f2;
-  border-bottom: 6px solid #ffffff;
-  padding-top: 44px;
-  height: 684px;
+.contact-wrapper {
+  width: 302px;
 }
-.about-us h1 {
-  color: #666d89;
-  font-size: 3rem;
-  font-weight: 900;
-  line-height: 17.86px;
-  letter-spacing: -0.2px;
-}
-.about-us p {
-  color: #767e9e;
-  font-size: 1.8rem;
-  font-weight: 300;
-  line-height: 30px;
-  margin-bottom: 9px;
-  padding-top: 2px;
-}
-
-.articles {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-top: 45px;
-}
-.articles article {
-  width: 300px;
-}
-.articles article h2 {
-  color: #666d89;
+.contact-wrapper h3 {
+  margin-top: 1px;
+  color: #f0d8d9;
   font-size: 18px;
   font-weight: 900;
   line-height: 17.86px;
-  margin-left: -1px;
-  padding-top: 1px;
-  letter-spacing: -0.1px;
-  word-break: break-all;
 }
-.articles article p {
-  color: #767e9e;
+.contact-wrapper p {
+  color: #f0d8d9;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: -8px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  margin-bottom: 21px;
+}
+.contact-wrapper div {
+  color: #f0d8d9;
   font-size: 12px;
   font-weight: 400;
   line-height: 21.56px;
-  margin-top: 7px;
 }
 
-.second-foto {
-  margin-left: -1px;
+.location {
+  margin-left: 4px;
+}
+.location span {
+  margin-left: 10px;
 }
 
-.wrapper-hidden {
-  overflow: hidden;
-  height: 34px;
-  margin-left: -1px;
-  padding-left: 1px;
+.phone {
+  margin-left: 2px;
+}
+.phone span {
+  margin-left: 9px;
 }
 
-.social-links {
-  margin-top: 24px;
-}
-
-.articles .first {
+.mail {
   margin-left: 1px;
+  margin-top: 1px;
 }
-.articles img {
-  margin-right: 6px;
+.mail span {
+  margin-left: 8px;
 }
-.articles a:hover img {
-  filter: brightness(30%);
-  transition: 0.3s;
+
+.footer {
+  background-color: #2d303a;
+  height: 54px;
+  padding-top: 22px;
+}
+.footer .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copyright {
+  color: #666d89;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 1px;
+  margin-top: 8px;
+  letter-spacing: -0.1px;
+}
+
+.link-section a {
+  margin-left: 6px;
 }
 
 /*# sourceMappingURL=singolo3.css.map */
