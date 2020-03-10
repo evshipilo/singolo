@@ -101,6 +101,10 @@ header {
   padding-right: 1px;
 }
 
+.header-navigation_onclick {
+  color: #eb5055 !important;
+}
+
 .section {
   height: 594px;
   background-color: #f06c64;
