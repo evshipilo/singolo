@@ -9,3 +9,22 @@ document.querySelector('.header-navigation ul').onclick = function (event) {
         }
     }
 }
+
+
+document.querySelector('.mobile_vertical').onclick = function (){
+    if(document.querySelector('.mobile_vertical').getAttribute('src')=='assets/mobile-vertical.png'){
+        document.querySelector('.mobile_vertical').setAttribute('src', 'assets/phone-vert-off.png');
+    }
+    else
+        document.querySelector('.mobile_vertical').setAttribute('src', 'assets/mobile-vertical.png');
+
+}
+
+document.querySelector('.mobile_horizontal').onclick = function (){
+    if(document.querySelector('.mobile_horizontal').getAttribute('src')=='assets/mobile-horizontal.png'){
+        document.querySelector('.mobile_horizontal').setAttribute('src', 'assets/phone-hor-off.png');
+    }
+    else
+        document.querySelector('.mobile_horizontal').setAttribute('src', 'assets/mobile-horizontal.png');
+
+}
