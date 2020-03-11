@@ -178,11 +178,11 @@ section {
 }
 
 .first__frame {
-  left: 940px;
+  left: 0px;
 }
 
 .second__frame {
-  right: 0px;
+  left: 940px;
 }
 
 .third__frame {
