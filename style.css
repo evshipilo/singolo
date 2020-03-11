@@ -123,34 +123,70 @@ button:hover img {
   transition: 0.5s;
 }
 
+button:active img {
+  cursor: pointer;
+  filter: hue-rotate(-150deg);
+  transition: 0.1s;
+}
+
 .left-btn {
   position: relative;
-  top: -175px;
-  right: -36px;
+  top: 280px;
+  right: 34px;
 }
 
 .right-btn {
   position: relative;
-  top: -175px;
-  right: -201px;
+  top: 280px;
+  right: -918px;
+}
+
+.mobile_3item {
+  position: relative;
+  top: 53px;
+  right: -220px;
 }
 
 .mobile_vertical {
   position: relative;
   top: 53px;
-  right: -83px;
+  right: -72px;
 }
 
 .mobile_horizontal {
   position: relative;
   top: -69px;
-  right: -154px;
+  right: -143px;
 }
 
 section {
   height: 494px;
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
+}
+
+.hide-frames {
+  overflow: hidden;
+  height: 590px;
+  position: relative;
+}
+
+.frame {
+  width: 940px;
+  height: 540px;
+  position: absolute;
+}
+
+.first__frame {
+  left: 940px;
+}
+
+.second__frame {
+  right: 0px;
+}
+
+.third__frame {
+  right: 940px;
 }
 
 .wrapper {
