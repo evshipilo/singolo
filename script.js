@@ -1,4 +1,5 @@
 "use strict"
+
 //------------------scroll to begin (wtf)
 function startScroll() {
     window.scrollTo(0, 0);
@@ -162,4 +163,28 @@ function animateFramesRight() {
 //------------------------end carousel
 //----------------change gallery
 
+const arrGalleryLinks = document.querySelectorAll('.gallery-buttons button');
+document.querySelector('.gallery-buttons').onclick = function (event) {
+    for (let i = 0; i < arrGalleryLinks.length; i++) {
+        //console.log(event.target);
+        if (event.target == arrGalleryLinks[i]) {
+            console.log(event.target);
+            arrGalleryLinks.forEach(element => element.classList.remove('gallery-button_onclick'));
+            arrGalleryLinks[i].classList.add('gallery-button_onclick');
+            //event.preventDefault();
+        }
+    }
+}
 
+const arrGalleryPicturesLinks = document.querySelectorAll('.gallery img');
+document.querySelector('.gallery').onclick = function (event) {
+    for (let i = 0; i < arrGalleryPicturesLinks.length; i++) {
+        //console.log(event.target);
+        if (event.target == arrGalleryPicturesLinks[i]) {
+            console.log(event.target);
+            arrGalleryPicturesLinks.forEach(element => element.classList.remove('gallery-img_onclick'));
+            arrGalleryPicturesLinks[i].classList.add('gallery-img_onclick');
+            //event.preventDefault();
+        }
+    }
+}

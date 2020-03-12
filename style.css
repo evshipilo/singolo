@@ -331,6 +331,11 @@ body {
   border: 1px solid #c5c5c5;
 }
 
+.gallery-button_onclick {
+  color: #dedede !important;
+  border: 1px solid #c5c5c5 !important;
+}
+
 button.first-button {
   margin-left: 1px;
   width: 29px;
@@ -366,6 +371,12 @@ button.forth-button {
 }
 .gallery img {
   margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.gallery-img_onclick {
+  border: 5px solid #F06C64;
+  box-sizing: border-box;
 }
 
 .about-us {
