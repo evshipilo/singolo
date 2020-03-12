@@ -132,61 +132,60 @@ button:active img {
 .left-btn {
   position: relative;
   top: 280px;
-  right: 34px;
+  left: 14px;
 }
 
 .right-btn {
   position: relative;
   top: 280px;
-  right: -918px;
+  left: 958px;
 }
 
 .mobile_3item {
   position: relative;
   top: 53px;
-  right: -220px;
+  left: 260px;
 }
 
 .mobile_vertical {
   position: relative;
   top: 53px;
-  right: -72px;
+  left: 112px;
 }
 
 .mobile_horizontal {
   position: relative;
   top: -69px;
-  right: -143px;
+  left: 183px;
+}
+
+.hide-frames {
+  overflow: hidden;
+  height: 600px;
+  width: 1020px;
+  position: relative;
+}
+
+.frame {
+  height: 600px;
+  width: 1020px;
+  position: absolute;
+}
+
+.first__frame {
+  left: 0px;
+  background-color: #F06C64;
+}
+
+.second__frame {
+  left: 1020px;
+  background-color: #648BF0;
 }
 
 section {
   height: 494px;
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
-}
-
-.hide-frames {
-  overflow: hidden;
-  height: 590px;
-  position: relative;
-}
-
-.frame {
-  width: 940px;
-  height: 540px;
-  position: absolute;
-}
-
-.first__frame {
-  left: 0px;
-}
-
-.second__frame {
-  left: 940px;
-}
-
-.third__frame {
-  right: 940px;
 }
 
 .wrapper {

@@ -40,22 +40,32 @@ document.querySelector('.left-btn').onclick = animateFramesLeft;
 document.querySelector('.right-btn').onclick = animateFramesRight;
 let firstFrameLeft;
 let secondFrameLeft;
-let firstFrame=document.querySelector(".first__frame");
-let secondFrame=document.querySelector(".second__frame");
+let firstFrame = document.querySelector(".first__frame");
+let secondFrame = document.querySelector(".second__frame");
 
-function enableLeftButton(){document.querySelector('.left-btn').style.pointerEvents = 'auto';}
-function enableRightButton(){document.querySelector('.right-btn').style.pointerEvents = 'auto';}
+function enableLeftButton() {
+    document.querySelector('.left-btn').style.pointerEvents = 'auto';
+}
+
+function enableRightButton() {
+    document.querySelector('.right-btn').style.pointerEvents = 'auto';
+}
 
 function animateFramesLeft() {
     document.querySelector('.left-btn').style.pointerEvents = 'none';  //disable button while animate
-    window.setTimeout(enableLeftButton, 2000);
-    firstFrameLeft=(window.getComputedStyle(firstFrame).left.split('px'))[0];
-    secondFrameLeft=(window.getComputedStyle(secondFrame).left.split('px'))[0];
-if(+firstFrameLeft==-940) firstFrameLeft=940;
-if(+secondFrameLeft==-940) secondFrameLeft=940;
+    window.setTimeout(enableLeftButton, 2000); //enable button after animate
+    firstFrameLeft = (window.getComputedStyle(firstFrame).left.split('px'))[0];
+    secondFrameLeft = (window.getComputedStyle(secondFrame).left.split('px'))[0];
+    if (+firstFrameLeft == -1020) {
+        firstFrameLeft = 1020;
+        document.querySelector('.section').style.backgroundColor = '#648BF0';
+    }
+    if (+secondFrameLeft == -1020) {
+        document.querySelector('.section').style.backgroundColor = '#f06c64';
+        secondFrameLeft = 1020;}
     document.querySelector(".first__frame").animate([
         {left: `${+firstFrameLeft}px`},
-        {left: `${+firstFrameLeft-940}px`}
+        {left: `${+firstFrameLeft - 1020}px`}
     ], {
         duration: 2000,
         easing: "cubic-bezier(.43,-0.29,.58,1.28)",
@@ -63,7 +73,7 @@ if(+secondFrameLeft==-940) secondFrameLeft=940;
     });
     document.querySelector(".second__frame").animate([
         {left: `${+secondFrameLeft}px`},
-        {left: `${+secondFrameLeft-940}px`}
+        {left: `${+secondFrameLeft - 1020}px`}
     ], {
         duration: 2000,
         easing: "cubic-bezier(.43,-0.29,.58,1.28)",
@@ -74,13 +84,19 @@ if(+secondFrameLeft==-940) secondFrameLeft=940;
 function animateFramesRight() {
     document.querySelector('.right-btn').style.pointerEvents = 'none';  //disable button while animate
     window.setTimeout(enableRightButton, 2000);
-    firstFrameLeft=(window.getComputedStyle(firstFrame).left.split('px'))[0];
-    secondFrameLeft=(window.getComputedStyle(secondFrame).left.split('px'))[0];
-    if(+firstFrameLeft==940) firstFrameLeft=-940;
-    if(+secondFrameLeft==940) secondFrameLeft=-940;
+    firstFrameLeft = (window.getComputedStyle(firstFrame).left.split('px'))[0];
+    secondFrameLeft = (window.getComputedStyle(secondFrame).left.split('px'))[0];
+    if (+firstFrameLeft == 1020) {
+        firstFrameLeft = -1020;
+        document.querySelector('.section').style.backgroundColor = '#648BF0';
+    }
+    if (+secondFrameLeft == 1020) {
+        secondFrameLeft = -1020;
+        document.querySelector('.section').style.backgroundColor = '#f06c64';
+    }
     document.querySelector(".first__frame").animate([
         {left: `${+firstFrameLeft}px`},
-        {left: `${+firstFrameLeft+940}px`}
+        {left: `${+firstFrameLeft + 1020}px`}
     ], {
         duration: 2000,
         easing: "cubic-bezier(.43,-0.29,.58,1.28)",
@@ -88,7 +104,7 @@ function animateFramesRight() {
     });
     document.querySelector(".second__frame").animate([
         {left: `${+secondFrameLeft}px`},
-        {left: `${+secondFrameLeft+940}px`}
+        {left: `${+secondFrameLeft + 1020}px`}
     ], {
         duration: 2000,
         easing: "cubic-bezier(.43,-0.29,.58,1.28)",
@@ -96,3 +112,4 @@ function animateFramesRight() {
     });
 }
 
+//------------------------end carousel
