@@ -1,4 +1,12 @@
 "use strict"
+//------------------scroll to begin (wtf)
+function startScroll() {
+    window.scrollTo(0, 0);
+}
+
+window.setTimeout(startScroll, 100);
+
+//-----------------scroll to sections
 
 const arrHeaderLinks = document.querySelectorAll('.header-navigation a');
 document.querySelector('.header-navigation ul').onclick = function (event) {
@@ -6,10 +14,48 @@ document.querySelector('.header-navigation ul').onclick = function (event) {
         if (event.target == arrHeaderLinks[i]) {
             arrHeaderLinks.forEach(element => element.classList.remove('header-navigation_onclick'));
             arrHeaderLinks[i].classList.add('header-navigation_onclick');
+            event.preventDefault();
+            if (i == 0) {
+                document.querySelector('.point1').scrollIntoView({
+                    block: "end",
+                    inline: "nearest",
+                    behavior: "smooth"
+                });
+            }
+            if (i == 1) {
+                document.querySelector('.point2').scrollIntoView({
+                    block: "center",
+                    inline: "nearest",
+                    behavior: "smooth"
+                });
+            }
+            if (i == 2) {
+                document.querySelector('.point3').scrollIntoView({
+                    block: "center",
+                    inline: "nearest",
+                    behavior: "smooth"
+                });
+            }
+            if (i == 3) {
+                document.querySelector('.point4').scrollIntoView({
+                    block: "center",
+                    inline: "nearest",
+                    behavior: "smooth"
+                });
+            }
+            if (i == 4) {
+                document.querySelector('.point5').scrollIntoView({
+                    block: "center",
+                    inline: "nearest",
+                    behavior: "smooth"
+                });
+            }
+
         }
     }
 }
 
+//--------------change phone pictures
 
 document.querySelector('.mobile_vertical').onclick = function () {
     if (document.querySelector('.mobile_vertical').getAttribute('src') == 'assets/mobile-vertical.png') {
@@ -62,7 +108,8 @@ function animateFramesLeft() {
     }
     if (+secondFrameLeft == -1020) {
         document.querySelector('.section').style.backgroundColor = '#f06c64';
-        secondFrameLeft = 1020;}
+        secondFrameLeft = 1020;
+    }
     document.querySelector(".first__frame").animate([
         {left: `${+firstFrameLeft}px`},
         {left: `${+firstFrameLeft - 1020}px`}
@@ -113,3 +160,6 @@ function animateFramesRight() {
 }
 
 //------------------------end carousel
+//----------------change gallery
+
+

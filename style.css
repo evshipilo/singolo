@@ -30,6 +30,10 @@ body {
   padding: 0;
 }
 
+.point1 {
+  height: 0px;
+}
+
 header {
   height: 89px;
   background-color: #2d303a;
@@ -37,6 +41,9 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "logo header-navigaton";
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo {
@@ -119,13 +126,13 @@ button {
 
 button:hover img {
   cursor: pointer;
-  filter: hue-rotate(-50deg);
+  filter: hue-rotate(250deg);
   transition: 0.5s;
 }
 
 button:active img {
   cursor: pointer;
-  filter: hue-rotate(-150deg);
+  filter: hue-rotate(150deg);
   transition: 0.1s;
 }
 
