@@ -162,29 +162,73 @@ function animateFramesRight() {
 
 //------------------------end carousel
 //----------------change gallery
+const arrGalleryPicturesLinks = document.querySelectorAll('.gallery img');
+const arrGalleryPicturesSrc = [];
+arrGalleryPicturesLinks.forEach(element => arrGalleryPicturesSrc.push(element.getAttribute('src')));
+console.log(arrGalleryPicturesSrc);
+// function makeRandomArr(a, b) {
+//     return Math.random() - 0.5;
+// }
+//
+// const randomArr1 = arrGalleryPicturesSrc.sort(makeRandomArr).slice(0); //slice(0) create a new copy of array with a new link
+// const randomArr2 = arrGalleryPicturesSrc.sort(makeRandomArr).slice(0);
+// const randomArr3 = arrGalleryPicturesSrc.sort(makeRandomArr).slice(0);
+// const randomArr4 = arrGalleryPicturesSrc.sort(makeRandomArr).slice(0);
 
 const arrGalleryLinks = document.querySelectorAll('.gallery-buttons button');
+
+const randomArr1=["assets/s2-smile.jpg","assets/s2-black.jpg",
+    "assets/s2-robot.jpg","assets/s2-animals.jpg","assets/s2-sdk.jpg","assets/s2-robots.jpg",
+    "assets/s2-birds.jpg","assets/s2-beast.jpg","assets/s2-words.jpg", "assets/s2-beast2.jpg",
+    "assets/s2-abstract.jpg","assets/s2-ship.jpg"];
+const randomArr2=["assets/s2-black.jpg",
+    "assets/s2-robot.jpg","assets/s2-animals.jpg","assets/s2-sdk.jpg","assets/s2-robots.jpg",
+    "assets/s2-birds.jpg","assets/s2-beast.jpg","assets/s2-words.jpg", "assets/s2-beast2.jpg",
+    "assets/s2-abstract.jpg","assets/s2-ship.jpg","assets/s2-smile.jpg"];
+const randomArr3=["assets/s2-robot.jpg","assets/s2-animals.jpg","assets/s2-sdk.jpg","assets/s2-robots.jpg",
+    "assets/s2-birds.jpg","assets/s2-beast.jpg","assets/s2-words.jpg", "assets/s2-beast2.jpg",
+    "assets/s2-abstract.jpg","assets/s2-ship.jpg","assets/s2-smile.jpg","assets/s2-black.jpg"];
+const randomArr4=["assets/s2-animals.jpg","assets/s2-sdk.jpg","assets/s2-robots.jpg",
+    "assets/s2-birds.jpg","assets/s2-beast.jpg","assets/s2-words.jpg", "assets/s2-beast2.jpg",
+    "assets/s2-abstract.jpg","assets/s2-ship.jpg","assets/s2-smile.jpg","assets/s2-black.jpg",
+    "assets/s2-robot.jpg"];
+
 document.querySelector('.gallery-buttons').onclick = function (event) {
     for (let i = 0; i < arrGalleryLinks.length; i++) {
-        //console.log(event.target);
         if (event.target == arrGalleryLinks[i]) {
             console.log(event.target);
             arrGalleryLinks.forEach(element => element.classList.remove('gallery-button_onclick'));
             arrGalleryLinks[i].classList.add('gallery-button_onclick');
-            //event.preventDefault();
+            if (i == 0) {
+                for (let j = 0; j < 12; j++) {
+                    arrGalleryPicturesLinks[j].setAttribute('src', randomArr1[j]);
+                }
+            }
+            if (i == 1) {
+                for (let j = 0; j < 12; j++) {
+                    arrGalleryPicturesLinks[j].setAttribute('src', randomArr2[j]);
+                }
+            }
+            if (i == 2) {
+                for (let j = 0; j < 12; j++) {
+                    arrGalleryPicturesLinks[j].setAttribute('src', randomArr3[j]);
+                }
+            }
+            if (i == 3) {
+                for (let j = 0; j < 12; j++) {
+                    arrGalleryPicturesLinks[j].setAttribute('src', randomArr4[j]);
+                }
+            }
         }
     }
 }
 
-const arrGalleryPicturesLinks = document.querySelectorAll('.gallery img');
 document.querySelector('.gallery').onclick = function (event) {
     for (let i = 0; i < arrGalleryPicturesLinks.length; i++) {
-        //console.log(event.target);
         if (event.target == arrGalleryPicturesLinks[i]) {
             console.log(event.target);
             arrGalleryPicturesLinks.forEach(element => element.classList.remove('gallery-img_onclick'));
             arrGalleryPicturesLinks[i].classList.add('gallery-img_onclick');
-            //event.preventDefault();
         }
     }
 }
