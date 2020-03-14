@@ -163,8 +163,9 @@ function animateFramesRight() {
 //------------------------end carousel
 //----------------change gallery
 const arrGalleryPicturesLinks = document.querySelectorAll('.gallery img');
-const arrGalleryPicturesSrc = [];
-arrGalleryPicturesLinks.forEach(element => arrGalleryPicturesSrc.push(element.getAttribute('src')));
+//const arrGalleryPicturesSrc = [];
+//arrGalleryPicturesLinks.forEach(element =>
+// arrGalleryPicturesSrc.push(element.getAttribute('src')));
 //console.log(arrGalleryPicturesSrc);
 // function makeRandomArr(a, b) {
 //     return Math.random() - 0.5;
@@ -196,7 +197,7 @@ const randomArr4 = ["assets/s2-animals.jpg", "assets/s2-sdk.jpg", "assets/s2-rob
 document.querySelector('.gallery-buttons').onclick = function (event) {
     for (let i = 0; i < arrGalleryLinks.length; i++) {
         if (event.target == arrGalleryLinks[i]) {
-            //console.log(event.target);
+            arrGalleryPicturesLinks.forEach(element => element.classList.remove('gallery-img_onclick'));
             arrGalleryLinks.forEach(element => element.classList.remove('gallery-button_onclick'));
             arrGalleryLinks[i].classList.add('gallery-button_onclick');
             if (i == 0) {
@@ -238,17 +239,21 @@ document.querySelector('.gallery').onclick = function (event) {
 
 document.querySelector('form').onsubmit = function (event) {
     event.preventDefault();
-    const formA=document.forms[0];
-    const subjectMessage= formA.elements.subject.value ? formA.elements.subject.value : 'no subject';
-    const descriptionMessage= formA.elements.detail.value ? formA.elements.detail.value : 'no description';
+    const formA = document.forms[0];
+    const subjectMessage = formA.elements.subject.value ? formA.elements.subject.value : '';
+    const subjectMessageStrong = formA.elements.subject.value ? 'Subject: ' : 'No' +
+        ' subject';
+    const descriptionMessage = formA.elements.detail.value ? formA.elements.detail.value : '';
+    const descriptionMessageStrong = formA.elements.detail.value ? 'Description: ' : 'No' +
+        ' description';
 
     formA.insertAdjacentHTML("afterbegin", `<div class="form-modal-wrapper">
     <div class="form-modal">
-    <p><strong>Email sent</strong></p>
+    <p style="color: #d6564f"><strong>Email sent</strong></p>
     <p><strong>Author:</strong> ${formA.elements.name.value}</p>
     <p><strong>Authors e-mail:</strong> ${formA.elements.email.value}</p>
-    <p><strong>Subject:</strong> ${subjectMessage}</p>
-    <p><strong>Description:</strong> ${descriptionMessage}</p>
+    <p><strong>${subjectMessageStrong}</strong> ${subjectMessage}</p>
+    <p><strong>${descriptionMessageStrong}</strong> ${descriptionMessage}</p>
     </div>
     <button class="modal-button">ok</button>
   </div>`);
@@ -261,9 +266,10 @@ document.querySelector('form').onsubmit = function (event) {
         fill: "forwards",
     });
 
-    document.querySelector(".modal-button").onclick = function (event){
+    document.querySelector(".modal-button").onclick = function (event) {
         document.querySelector(".form-modal-wrapper").remove();
     }
 }
 
 
+//document.window.scrollTo(0, 0);
