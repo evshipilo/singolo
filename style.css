@@ -502,6 +502,46 @@ form {
   display: grid;
   grid-template-columns: 619px;
   grid-gap: 16px;
+  position: relative;
+}
+form .form-modal-wrapper {
+  position: fixed;
+  left: 30%;
+  top: 20%;
+  height: 30%;
+  width: 30%;
+  background: #2d303a;
+  border-radius: 5px;
+  color: #f2f2f2;
+  font-family: Lato;
+  padding: 3% 3% 5% 3%;
+}
+form .form-modal-wrapper button {
+  outline: none;
+  border: none;
+  color: #f2f2f2;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 3%;
+  left: 10%;
+  background-color: #d6564f;
+  box-sizing: border-box;
+  width: 10%;
+  cursor: pointer;
+}
+form .form-modal-wrapper button:hover {
+  border: 1px solid #f48c8f;
+  transition: border 0.3s;
+}
+form .form-modal-wrapper .form-modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+  word-wrap: break-word;
+  height: 100%;
+}
+form .form-modal-wrapper .form-modal p {
+  margin: 2px;
+  font-size: 1.5rem;
 }
 form input {
   width: 605px;
