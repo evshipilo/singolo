@@ -577,15 +577,18 @@ form input:focus::placeholder {
   transition: opacity 0.3s ease;
 }
 form input[name=submit] {
-  width: 100px;
+  width: 136px;
+  font-size: 14px;
+  font-weight: 600;
   padding-left: 5px;
   cursor: pointer;
   border: none;
-  transition: border 0.3s ease;
+  background: #FBC65F;
+  color: #886A30 !important;
+  transition: border 0.3s;
 }
 form input[name=submit]:hover {
-  border: 1px solid #f48c8f;
-  transition: border 0.3s ease;
+  border: 2px solid #f2f2f2;
 }
 form input:invalid {
   color: #666d89;
@@ -690,20 +693,9 @@ form textarea:focus::placeholder {
   justify-content: space-between;
 }
 
-.copyright {
-  color: #666d89;
-  font-size: 12px;
-  font-weight: 400;
-  margin-left: 1px;
-  margin-top: 8px;
-  letter-spacing: -0.1px;
+.link-section {
+  margin: 0 auto;
 }
-.copyright span {
-  font-size: 4px;
-  position: relative;
-  top: -2px;
-}
-
 .link-section a {
   margin-left: 6px;
 }
