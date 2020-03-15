@@ -247,7 +247,7 @@ document.querySelector('form').onsubmit = function (event) {
     const descriptionMessage = formA.elements.detail.value ? formA.elements.detail.value : '';
     const descriptionMessageStrong = formA.elements.detail.value ? 'Description: ' : 'No' +
         ' description';
-
+if(!document.querySelector('.form-modal-wrapper')) {
     formA.insertAdjacentHTML("afterbegin", `<div class="form-modal-wrapper">
     <div class="form-modal">
     <p style="color: #d6564f"><strong>Email sent</strong></p>
@@ -266,7 +266,7 @@ document.querySelector('form').onsubmit = function (event) {
         easing: "linear",
         fill: "forwards",
     });
-
+}
     document.querySelector(".modal-button").onclick = function (event) {
         document.querySelector(".form-modal-wrapper").remove();
     }

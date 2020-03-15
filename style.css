@@ -537,8 +537,8 @@ form .form-modal-wrapper button {
   font-size: 1.8rem;
 }
 form .form-modal-wrapper button:hover {
-  border: 1px solid #f48c8f;
-  transition: border 0.3s;
+  color: #2d303a;
+  transition: color 0.3s;
 }
 form .form-modal-wrapper .form-modal {
   overflow-x: hidden;
