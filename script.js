@@ -58,7 +58,7 @@ document.querySelector('.header-navigation ul').onclick = function (event) {
 
 //--------------change phone pictures
 
-document.querySelector('.mobile_vertical').onclick = function () {
+document.querySelector('.mobile_vertical-unvisible').onclick = function () {
     if (document.querySelector('.mobile_vertical').getAttribute('src') == 'assets/mobile-vertical.png') {
         document.querySelector('.mobile_vertical').setAttribute('src', 'assets/phone-vert-off.png');
     } else
@@ -66,7 +66,7 @@ document.querySelector('.mobile_vertical').onclick = function () {
 
 }
 
-document.querySelector('.mobile_horizontal').onclick = function () {
+document.querySelector('.mobile_horizontal-unvisible').onclick = function () {
     if (document.querySelector('.mobile_horizontal').getAttribute('src') == 'assets/mobile-horizontal.png') {
         document.querySelector('.mobile_horizontal').setAttribute('src', 'assets/phone-hor-off.png');
     } else
@@ -74,13 +74,13 @@ document.querySelector('.mobile_horizontal').onclick = function () {
 
 }
 
-document.querySelector('.mobile_3item').onclick = function () {
-    if (document.querySelector('.mobile_3item').getAttribute('src') == 'assets/Slide-2-on.png') {
-        document.querySelector('.mobile_3item').setAttribute('src', 'assets/Slide-2-off.png');
-    } else
-        document.querySelector('.mobile_3item').setAttribute('src', 'assets/Slide-2-on.png');
-
-}
+// document.querySelector('.mobile_3item').onclick = function () {
+//     if (document.querySelector('.mobile_3item').getAttribute('src') == 'assets/Slide-2-on.png') {
+//         document.querySelector('.mobile_3item').setAttribute('src', 'assets/Slide-2-off.png');
+//     } else
+//         document.querySelector('.mobile_3item').setAttribute('src', 'assets/Slide-2-on.png');
+//
+// }
 
 //------------------------carousel
 document.querySelector('.left-btn').onclick = animateFramesLeft;
@@ -242,17 +242,15 @@ document.querySelector('form').onsubmit = function (event) {
     event.preventDefault();
     const formA = document.forms[0];
     const subjectMessage = formA.elements.subject.value ? formA.elements.subject.value : '';
-    const subjectMessageStrong = formA.elements.subject.value ? 'Subject: ' : 'No' +
+    const subjectMessageStrong = formA.elements.subject.value ? 'Subject: ' : 'Without' +
         ' subject';
     const descriptionMessage = formA.elements.detail.value ? formA.elements.detail.value : '';
-    const descriptionMessageStrong = formA.elements.detail.value ? 'Description: ' : 'No' +
+    const descriptionMessageStrong = formA.elements.detail.value ? 'Description: ' : 'Without' +
         ' description';
 if(!document.querySelector('.form-modal-wrapper')) {
     formA.insertAdjacentHTML("afterbegin", `<div class="form-modal-wrapper">
     <div class="form-modal">
-    <p style="color: #d6564f"><strong>Email sent</strong></p>
-    <p><strong>Author:</strong> ${formA.elements.name.value}</p>
-    <p><strong>Authors e-mail:</strong> ${formA.elements.email.value}</p>
+    <p style="color: #d6564f"><strong>The letter was sent</strong></p>
     <p><strong>${subjectMessageStrong}</strong> ${subjectMessage}</p>
     <p><strong>${descriptionMessageStrong}</strong> ${descriptionMessage}</p>
     </div>

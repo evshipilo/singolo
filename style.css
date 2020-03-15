@@ -158,12 +158,38 @@ button:active img {
   position: relative;
   top: 53px;
   left: 112px;
+  user-select: none;
+}
+
+.mobile_vertical-unvisible {
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  top: 53px;
+  left: 112px;
+  height: 458px;
+  width: 216px;
+  border-radius: 27px;
+  cursor: pointer;
+}
+
+.mobile_horizontal-unvisible {
+  position: absolute;
+  z-index: 10;
+  opacity: 0;
+  top: 174px;
+  left: 424px;
+  height: 216px;
+  width: 460px;
+  border-radius: 27px;
+  cursor: pointer;
 }
 
 .mobile_horizontal {
   position: relative;
   top: -69px;
   left: 183px;
+  user-select: none;
 }
 
 .hide-frames {
