@@ -25,28 +25,28 @@ document.querySelector('.header-navigation ul').onclick = function (event) {
             }
             if (i == 1) {
                 document.querySelector('.point2').scrollIntoView({
-                    block: "center",
+                    block: "start",
                     inline: "nearest",
                     behavior: "smooth"
                 });
             }
             if (i == 2) {
                 document.querySelector('.point3').scrollIntoView({
-                    block: "center",
+                    block: "start",
                     inline: "nearest",
                     behavior: "smooth"
                 });
             }
             if (i == 3) {
                 document.querySelector('.point4').scrollIntoView({
-                    block: "center",
+                    block: "start",
                     inline: "nearest",
                     behavior: "smooth"
                 });
             }
             if (i == 4) {
                 document.querySelector('.point5').scrollIntoView({
-                    block: "center",
+                    block: "start",
                     inline: "nearest",
                     behavior: "smooth"
                 });
