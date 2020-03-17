@@ -159,10 +159,10 @@ button:active img {
 .mobile_vertical-unvisible {
   position: absolute;
   z-index: 10;
-  opacity: 0;
+  opacity: 1;
   top: 9%;
   left: 11%;
-  height: 76.8%;
+  height: 75.8%;
   width: 21%;
   border-radius: 27px;
   cursor: pointer;
@@ -173,8 +173,8 @@ button:active img {
 .mobile_horizontal-unvisible {
   position: absolute;
   z-index: 10;
-  opacity: 0;
-  top: 29.3%;
+  opacity: 1;
+  top: 28.8%;
   left: 41.7%;
   height: 35.9%;
   width: 44.8%;
@@ -189,7 +189,7 @@ button:active img {
   top: 29%;
   left: 41.7%;
   user-select: none;
-  width: 47.3%;
+  width: 47.4%;
 }
 
 .hide-frames {

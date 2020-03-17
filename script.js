@@ -91,7 +91,7 @@ window.onresize = function( event ) {
     sectionWidth=getComputedStyle(document.querySelector('.section')).width.split('px')[0];
     document.querySelector('.section').style.height=`${+sectionWidth*0.588}px`;
 };
-//------------end response
+//-----end response
 
 document.querySelector('.left-btn').onclick = animateFramesLeft;
 document.querySelector('.right-btn').onclick = animateFramesRight;
@@ -115,10 +115,10 @@ function animateFramesLeft() {
     secondFrameLeft = (window.getComputedStyle(secondFrame).left.split('px'))[0];
     if (+firstFrameLeft == -1020) {
         firstFrameLeft = 1020;
-        document.querySelector('.section').style.backgroundColor = '#648BF0';
+        //document.querySelector('.section').style.backgroundColor = '#648BF0';
     }
     if (+secondFrameLeft == -1020) {
-        document.querySelector('.section').style.backgroundColor = '#f06c64';
+        //document.querySelector('.section').style.backgroundColor = '#f06c64';
         secondFrameLeft = 1020;
     }
     document.querySelector(".first__frame").animate([
@@ -146,11 +146,11 @@ function animateFramesRight() {
     secondFrameLeft = (window.getComputedStyle(secondFrame).left.split('px'))[0];
     if (+firstFrameLeft == 1020) {
         firstFrameLeft = -1020;
-        document.querySelector('.section').style.backgroundColor = '#648BF0';
+        //document.querySelector('.section').style.backgroundColor = '#648BF0';
     }
     if (+secondFrameLeft == 1020) {
         secondFrameLeft = -1020;
-        document.querySelector('.section').style.backgroundColor = '#f06c64';
+        //document.querySelector('.section').style.backgroundColor = '#f06c64';
     }
     document.querySelector(".first__frame").animate([
         {left: `${+firstFrameLeft}px`},
