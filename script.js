@@ -88,6 +88,7 @@ let sectionWidth;
 sectionWidth=getComputedStyle(document.querySelector('.section')).width.split('px')[0];
 document.querySelector('.section').style.height=`${+sectionWidth*0.588}px`;
 window.onresize = function( event ) {
+   // console.log(sectionWidth);
     sectionWidth=getComputedStyle(document.querySelector('.section')).width.split('px')[0];
     document.querySelector('.section').style.height=`${+sectionWidth*0.588}px`;
 };
@@ -100,38 +101,40 @@ let secondFrameLeft;
 let firstFrame = document.querySelector(".first__frame");
 let secondFrame = document.querySelector(".second__frame");
 
-function enableLeftButton() {
+function enableButton() {
     document.querySelector('.left-btn').style.pointerEvents = 'auto';
-}
-
-function enableRightButton() {
     document.querySelector('.right-btn').style.pointerEvents = 'auto';
 }
 
 function animateFramesLeft() {
     document.querySelector('.left-btn').style.pointerEvents = 'none';  //disable button while animate
-    window.setTimeout(enableLeftButton, 2000); //enable button after animate
+    document.querySelector('.right-btn').style.pointerEvents = 'none';  //disable button while animate
+    window.setTimeout(enableButton, 2000); //enable button after animate
     firstFrameLeft = (window.getComputedStyle(firstFrame).left.split('px'))[0];
     secondFrameLeft = (window.getComputedStyle(secondFrame).left.split('px'))[0];
-    if (+firstFrameLeft == -1020) {
-        firstFrameLeft = 1020;
-        //document.querySelector('.section').style.backgroundColor = '#648BF0';
-    }
-    if (+secondFrameLeft == -1020) {
-        //document.querySelector('.section').style.backgroundColor = '#f06c64';
-        secondFrameLeft = 1020;
-    }
+    console.log(sectionWidth+'----w');
+console.log(firstFrameLeft+' -----1');
+console.log(secondFrameLeft+'-----2');
+    if (+firstFrameLeft < -10 ) firstFrameLeft = 100;  //--- 10 because
+    // chrome dont want 0 )))
+    if (+firstFrameLeft == 0 ) firstFrameLeft = 0;
+    if (+firstFrameLeft > 10 ) firstFrameLeft = 100;
+
+    if (+secondFrameLeft < -10) secondFrameLeft = 100;
+    if (+secondFrameLeft == 0) secondFrameLeft = 0;
+    if (+secondFrameLeft > 10) secondFrameLeft = 100;
+
     document.querySelector(".first__frame").animate([
-        {left: `${+firstFrameLeft}px`},
-        {left: `${+firstFrameLeft - 1020}px`}
+        {left: `${+firstFrameLeft}%`},
+        {left: `${+firstFrameLeft - 100}%`}
     ], {
         duration: 2000,
         easing: "cubic-bezier(.43,-0.29,.58,1.28)",
         fill: "forwards",
     });
     document.querySelector(".second__frame").animate([
-        {left: `${+secondFrameLeft}px`},
-        {left: `${+secondFrameLeft - 1020}px`}
+        {left: `${+secondFrameLeft}%`},
+        {left: `${+secondFrameLeft - 100}%`}
     ], {
         duration: 2000,
         easing: "cubic-bezier(.43,-0.29,.58,1.28)",
@@ -141,28 +144,29 @@ function animateFramesLeft() {
 
 function animateFramesRight() {
     document.querySelector('.right-btn').style.pointerEvents = 'none';  //disable button while animate
-    window.setTimeout(enableRightButton, 2000);
+    document.querySelector('.left-btn').style.pointerEvents = 'none';  //disable button while animate
+    window.setTimeout(enableButton, 2000);
     firstFrameLeft = (window.getComputedStyle(firstFrame).left.split('px'))[0];
     secondFrameLeft = (window.getComputedStyle(secondFrame).left.split('px'))[0];
-    if (+firstFrameLeft == 1020) {
-        firstFrameLeft = -1020;
-        //document.querySelector('.section').style.backgroundColor = '#648BF0';
-    }
-    if (+secondFrameLeft == 1020) {
-        secondFrameLeft = -1020;
-        //document.querySelector('.section').style.backgroundColor = '#f06c64';
-    }
+    if (+firstFrameLeft < -10) firstFrameLeft = -100;
+    if (+firstFrameLeft == 0) firstFrameLeft = 0;
+    if (+firstFrameLeft > 10) firstFrameLeft = -100;
+
+    if (+secondFrameLeft < -10) secondFrameLeft = -100;
+    if (+secondFrameLeft == 0) secondFrameLeft = 0;
+    if (+secondFrameLeft > 10) secondFrameLeft = -100;
+
     document.querySelector(".first__frame").animate([
-        {left: `${+firstFrameLeft}px`},
-        {left: `${+firstFrameLeft + 1020}px`}
+        {left: `${+firstFrameLeft}%`},
+        {left: `${+firstFrameLeft + 100}%`}
     ], {
         duration: 2000,
         easing: "cubic-bezier(.43,-0.29,.58,1.28)",
         fill: "forwards",
     });
     document.querySelector(".second__frame").animate([
-        {left: `${+secondFrameLeft}px`},
-        {left: `${+secondFrameLeft + 1020}px`}
+        {left: `${+secondFrameLeft}%`},
+        {left: `${+secondFrameLeft + 100}%`}
     ], {
         duration: 2000,
         easing: "cubic-bezier(.43,-0.29,.58,1.28)",
