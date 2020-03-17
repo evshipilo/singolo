@@ -83,6 +83,16 @@ document.querySelector('.mobile_horizontal-unvisible').onclick = function () {
 // }
 
 //------------------------carousel
+//---response
+let sectionWidth;
+sectionWidth=getComputedStyle(document.querySelector('.section')).width.split('px')[0];
+document.querySelector('.section').style.height=`${+sectionWidth*0.588}px`;
+window.onresize = function( event ) {
+    sectionWidth=getComputedStyle(document.querySelector('.section')).width.split('px')[0];
+    document.querySelector('.section').style.height=`${+sectionWidth*0.588}px`;
+};
+//------------end response
+
 document.querySelector('.left-btn').onclick = animateFramesLeft;
 document.querySelector('.right-btn').onclick = animateFramesRight;
 let firstFrameLeft;

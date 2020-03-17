@@ -105,7 +105,8 @@ header {
 }
 
 .section {
-  height: 594px;
+  box-sizing: border-box;
+  height: 600px;
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
 }
@@ -130,71 +131,76 @@ button:active img {
 
 .left-btn {
   position: absolute;
-  top: 280px;
-  left: 3%;
+  top: calc(50% - 20px);
+  left: 3.5%;
 }
 
 .right-btn {
   position: absolute;
-  top: 280px;
-  right: 3%;
+  top: calc(50% - 20px);
+  right: 3.5%;
 }
 
 .mobile_3item {
-  position: relative;
-  top: 53px;
-  left: 260px;
+  position: absolute;
+  top: 8.83%;
+  left: 25.49%;
+  width: 50.68%;
 }
 
 .mobile_vertical {
-  position: relative;
-  top: 53px;
-  left: 112px;
+  position: absolute;
+  top: 9%;
+  left: 11%;
   user-select: none;
+  width: 23.5%;
 }
 
 .mobile_vertical-unvisible {
   position: absolute;
   z-index: 10;
   opacity: 0;
-  top: 53px;
-  left: 112px;
-  height: 458px;
-  width: 216px;
+  top: 9%;
+  left: 11%;
+  height: 76.8%;
+  width: 21%;
   border-radius: 27px;
   cursor: pointer;
   user-select: none;
+  border: 1px solid #000;
 }
 
 .mobile_horizontal-unvisible {
   position: absolute;
   z-index: 10;
   opacity: 0;
-  top: 174px;
-  left: 424px;
-  height: 216px;
-  width: 460px;
+  top: 29.3%;
+  left: 41.7%;
+  height: 35.9%;
+  width: 44.8%;
   border-radius: 27px;
   cursor: pointer;
   user-select: none;
+  border: 1px solid #000;
 }
 
 .mobile_horizontal {
-  position: relative;
-  top: -69px;
-  left: 183px;
+  position: absolute;
+  top: 29%;
+  left: 41.7%;
   user-select: none;
+  width: 47.3%;
 }
 
 .hide-frames {
   overflow: hidden;
-  height: 600px;
+  height: calc(100% + 6px);
   width: 100%;
   position: relative;
 }
 
 .frame {
-  height: 600px;
+  height: 100%;
   width: 100%;
   position: absolute;
 }
