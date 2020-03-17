@@ -9,6 +9,9 @@ window.setTimeout(startScroll, 100);
 
 //-----------------scroll to sections
 
+//document.querySelectorAll('.rows-3
+// img').forEach(elenent=>elenent.style.width='59px');
+
 const arrHeaderLinks = document.querySelectorAll('.header-navigation a');
 document.querySelector('.header-navigation ul').onclick = function (event) {
     for (let i = 0; i < arrHeaderLinks.length; i++) {
@@ -112,10 +115,10 @@ function animateFramesLeft() {
     window.setTimeout(enableButton, 2000); //enable button after animate
     firstFrameLeft = (window.getComputedStyle(firstFrame).left.split('px'))[0];
     secondFrameLeft = (window.getComputedStyle(secondFrame).left.split('px'))[0];
-    console.log(sectionWidth+'----w');
-console.log(firstFrameLeft+' -----1');
-console.log(secondFrameLeft+'-----2');
-    if (+firstFrameLeft < -10 ) firstFrameLeft = 100;  //--- 10 because
+//     console.log(sectionWidth+'----w');
+// console.log(firstFrameLeft+' -----1');
+// console.log(secondFrameLeft+'-----2');
+    if (+firstFrameLeft < -10 ) firstFrameLeft = 100;  //--- -10 because
     // chrome dont want 0 )))
     if (+firstFrameLeft == 0 ) firstFrameLeft = 0;
     if (+firstFrameLeft > 10 ) firstFrameLeft = 100;

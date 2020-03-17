@@ -222,8 +222,10 @@ section {
 }
 
 .wrapper {
-  width: 940px;
+  max-width: 1020px;
   margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .main-paragraph {
@@ -253,20 +255,18 @@ h1 {
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
 }
-.rows-3 img {
-  vertical-align: top;
+.rows-3 article {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: start;
 }
-
-.rows-first-article img {
-  margin-left: 1px;
+.rows-3 img {
+  flex-basis: 59px;
 }
 
 .rows-fird-article h2 {
   margin-left: 3px !important;
-}
-
-.rows-fourth-article img {
-  margin-left: 1px;
 }
 
 .rows-sixth-article h2 {
@@ -274,10 +274,8 @@ h1 {
 }
 
 .content-wrapper {
-  width: 220px;
-  display: inline-block;
-  margin-left: 17px;
-  margin-bottom: 5px;
+  padding-left: 19px;
+  padding-bottom: 5px;
 }
 .content-wrapper h2 {
   color: #666d89;
@@ -706,19 +704,19 @@ form textarea:focus::placeholder {
 }
 
 .point2 {
-  scroll-margin-top: 95px;
+  scroll-margin-top: 90px;
 }
 
 .point3 {
-  scroll-margin-top: 95px;
+  scroll-margin-top: 90px;
 }
 
 .point4 {
-  scroll-margin-top: 95px;
+  scroll-margin-top: 90px;
 }
 
 .point5 {
-  scroll-margin-top: 95px;
+  scroll-margin-top: 90px;
 }
 
 /*# sourceMappingURL=style.css.map */
