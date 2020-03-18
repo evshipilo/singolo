@@ -426,7 +426,11 @@ button.forth-button {
   margin-top: 45px;
 }
 .articles article {
-  max-width: 300px;
+  width: 32%;
+}
+.articles article > img {
+  width: 100%;
+  height: auto;
 }
 .articles article h2 {
   color: #666d89;
