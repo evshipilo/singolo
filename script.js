@@ -9,11 +9,14 @@ window.setTimeout(startScroll, 100);
 
 //-----------------scroll to sections
 
-//document.querySelectorAll('.rows-3
-// img').forEach(elenent=>elenent.style.width='59px');
-
 const arrHeaderLinks = document.querySelectorAll('.header-navigation a');
+window.setTimeout(()=>{arrHeaderLinks.forEach(element => element.classList.remove('header-navigation_onclick'));
+    arrHeaderLinks[0].classList.add('header-navigation_onclick');
+}, 100);
+
+
 document.querySelector('.header-navigation ul').onclick = function (event) {
+    document.onscroll=null;
     for (let i = 0; i < arrHeaderLinks.length; i++) {
         if (event.target == arrHeaderLinks[i]) {
             arrHeaderLinks.forEach(element => element.classList.remove('header-navigation_onclick'));
@@ -54,10 +57,32 @@ document.querySelector('.header-navigation ul').onclick = function (event) {
                     behavior: "smooth"
                 });
             }
-
         }
     }
+
+    window.setTimeout(()=>{document.onscroll=onScroll}, 1000);
+    //document.onscroll=null;
 }
+//----menu item light depends to scroll
+document.onscroll=onScroll;
+    function onScroll(){
+    let rect1=document.querySelector('.point1').getBoundingClientRect().y;
+    let rect2=document.querySelector('.point2').getBoundingClientRect().y;
+    let rect3=document.querySelector('.point3').getBoundingClientRect().y;
+    let rect4=document.querySelector('.point4').getBoundingClientRect().y;
+    let rect5=document.querySelector('.point5').getBoundingClientRect().y;
+    let rectArr=[rect1,rect2,rect3,rect4,rect5,10000];
+    for (let i=0; i<5; i++){
+        if((rectArr[i]-95)<0 && (rectArr[i+1]-95)>0 ){
+            arrHeaderLinks.forEach(element => element.classList.remove('header-navigation_onclick'));
+            arrHeaderLinks[i].classList.add('header-navigation_onclick');
+        }
+
+    }
+
+}
+
+
 
 //--------------change phone pictures
 
@@ -122,7 +147,6 @@ function animateFramesLeft() {
     // chrome dont want 0 )))
     if (+firstFrameLeft == 0 ) firstFrameLeft = 0;
     if (+firstFrameLeft > 10 ) firstFrameLeft = 100;
-
     if (+secondFrameLeft < -10) secondFrameLeft = 100;
     if (+secondFrameLeft == 0) secondFrameLeft = 0;
     if (+secondFrameLeft > 10) secondFrameLeft = 100;
@@ -284,6 +308,8 @@ if(!document.querySelector('.form-modal-wrapper')) {
 }
     document.querySelector(".modal-button").onclick = function (event) {
         document.querySelector(".form-modal-wrapper").remove();
+        document.querySelector('form').reset()
+
     }
 }
 

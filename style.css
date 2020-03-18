@@ -28,6 +28,7 @@ body {
   max-width: 1020px;
   margin: 0 auto;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 .point1 {
@@ -261,10 +262,6 @@ h1 {
   justify-content: space-between;
   align-items: start;
 }
-.rows-3 img {
-  flex-basis: 59px;
-}
-
 .rows-fird-article h2 {
   margin-left: 3px !important;
 }
@@ -302,8 +299,10 @@ html {
 }
 
 .wrapper-width {
-  max-width: 950px;
+  max-width: 1020px;
   margin: 0 auto;
+  padding-right: 35px;
+  padding-left: 35px;
 }
 
 .portfolio {
@@ -354,31 +353,30 @@ html {
 
 button.first-button {
   margin-left: 1px;
-  max-width: 29px;
+  width: 29px;
 }
 
 button.second-button {
-  max-width: 78px;
+  width: 78px;
   padding-right: 3px;
   letter-spacing: -0.2px;
 }
 
 button.third-button {
-  max-width: 93px;
+  width: 93px;
   padding-right: 3px;
   padding-left: 3px;
   letter-spacing: -0.2px;
 }
 
 button.forth-button {
-  max-width: 57px;
+  width: 57px;
   padding-right: 4px;
   padding-left: 5px;
   letter-spacing: 0.6px;
 }
 
 .gallery {
-  height: 601px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -391,6 +389,8 @@ button.forth-button {
 .gallery img {
   margin-bottom: 20px;
   cursor: pointer;
+  width: 23.4%;
+  height: auto;
 }
 
 .gallery-img_onclick {
