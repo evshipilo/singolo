@@ -47,6 +47,57 @@ header {
   top: 0;
   z-index: 100;
 }
+@media (max-width: 620px) {
+  header {
+    height: 71px;
+    position: relative;
+    display: block;
+    padding-right: 0px;
+    padding-left: 0px;
+    border-bottom: none;
+  }
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  width: 25px;
+  height: 20px;
+  left: 20px;
+  top: 26px;
+  cursor: pointer;
+}
+.hamburger span {
+  position: absolute;
+  width: 100%;
+  height: 2.4px;
+  top: calc(50% - 1.2px);
+  background: #fff;
+  border-radius: 5px;
+}
+.hamburger:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.4px;
+  top: 0;
+  background: #fff;
+  border-radius: 5px;
+}
+.hamburger:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2.4px;
+  top: calc(100% - 2.4px);
+  background: #fff;
+  border-radius: 5px;
+}
+@media (max-width: 620px) {
+  .hamburger {
+    display: inline-block;
+  }
+}
 
 .logo a {
   color: #ffffff;
@@ -56,6 +107,14 @@ header {
   text-decoration: none;
   display: inline-block;
   margin-top: 29px;
+}
+@media (max-width: 620px) {
+  .logo a {
+    font-size: 19.6875px;
+    line-height: 24px;
+    margin-left: 39.5%;
+    margin-top: 25px;
+  }
 }
 .logo a span {
   margin-left: -4px;
@@ -68,6 +127,12 @@ header {
 .logo a:hover span {
   color: #ffffff;
   transition: 0.5s;
+}
+
+@media (max-width: 620px) {
+  .header-navigation {
+    display: none;
+  }
 }
 
 .header-navigation ul li {
@@ -148,6 +213,12 @@ button:active img {
     left: 3.1%;
   }
 }
+@media (max-width: 620px) {
+  .left-btn {
+    left: 1%;
+    top: calc(50% - 16px);
+  }
+}
 
 .right-btn {
   position: absolute;
@@ -158,6 +229,12 @@ button:active img {
   .right-btn {
     top: calc(50% - 12px);
     right: 2.6%;
+  }
+}
+@media (max-width: 620px) {
+  .right-btn {
+    right: 1%;
+    top: calc(50% - 16px);
   }
 }
 
@@ -179,7 +256,7 @@ button:active img {
 .mobile_vertical-unvisible {
   position: absolute;
   z-index: 10;
-  opacity: 1;
+  opacity: 0;
   top: 9%;
   left: 11%;
   height: 75.8%;
@@ -194,11 +271,16 @@ button:active img {
     border-radius: 18px;
   }
 }
+@media (max-width: 620px) {
+  .mobile_vertical-unvisible {
+    border-radius: 9px;
+  }
+}
 
 .mobile_horizontal-unvisible {
   position: absolute;
   z-index: 10;
-  opacity: 1;
+  opacity: 0;
   top: 28.8%;
   left: 41.7%;
   height: 35.9%;
@@ -212,6 +294,11 @@ button:active img {
   .mobile_horizontal-unvisible {
     top: 29.5%;
     border-radius: 18px;
+  }
+}
+@media (max-width: 620px) {
+  .mobile_horizontal-unvisible {
+    border-radius: 9px;
   }
 }
 
@@ -252,9 +339,13 @@ button:active img {
 }
 
 .content {
-  height: 668px;
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
+}
+@media (max-width: 620px) {
+  .content {
+    border-bottom: none;
+  }
 }
 
 .wrapper {
@@ -262,6 +353,12 @@ button:active img {
   margin: 0 auto;
   padding-left: 40px;
   padding-right: 40px;
+}
+@media (max-width: 620px) {
+  .wrapper {
+    padding-left: 32px;
+    padding-right: 29px;
+  }
 }
 
 .main-paragraph {
@@ -281,6 +378,12 @@ button:active img {
     height: 81px;
   }
 }
+@media (max-width: 620px) {
+  .main-paragraph {
+    height: auto;
+    margin-bottom: 30px;
+  }
+}
 
 h1 {
   margin-top: 0px;
@@ -291,15 +394,27 @@ h1 {
   letter-spacing: -0.2px;
   margin-left: 0px;
 }
+@media (max-width: 620px) {
+  h1 {
+    padding-top: 25px;
+  }
+}
 
 .rows-3 {
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 10px;
   grid-template-columns: repeat(3, 1fr);
 }
 @media (max-width: 768px) {
   .rows-3 {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 620px) {
+  .rows-3 {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0px;
+    margin-bottom: -6px;
   }
 }
 .rows-3 article {
@@ -316,6 +431,11 @@ h1 {
 .content-wrapper {
   padding-left: 19px;
   padding-bottom: 27px;
+}
+@media (max-width: 620px) {
+  .content-wrapper {
+    padding-bottom: 22px;
+  }
 }
 .content-wrapper h2 {
   color: #666d89;
@@ -347,11 +467,23 @@ html {
   padding-right: 35px;
   padding-left: 35px;
 }
+@media (max-width: 620px) {
+  .wrapper-width {
+    padding-right: 26px;
+    padding-left: 24px;
+  }
+}
 
 .portfolio {
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
   padding-top: 30px;
+}
+@media (max-width: 620px) {
+  .portfolio {
+    padding-top: 27px;
+    border-bottom: none;
+  }
 }
 .portfolio h1 {
   color: #666d89;
@@ -437,6 +569,12 @@ button.forth-button {
     padding-bottom: 6.7%;
   }
 }
+@media (max-width: 620px) {
+  .gallery {
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
 .gallery img {
   margin-bottom: 20px;
   cursor: pointer;
@@ -447,6 +585,17 @@ button.forth-button {
   .gallery img {
     margin-bottom: 21px;
     width: 31.2%;
+  }
+}
+@media (max-width: 620px) {
+  .gallery img {
+    width: 48%;
+    margin-bottom: 14px;
+  }
+}
+@media (max-width: 620px) {
+  .gallery img:nth-child(9), .gallery img:nth-child(10), .gallery img:nth-child(11), .gallery img:nth-child(12) {
+    display: none;
   }
 }
 
@@ -466,6 +615,14 @@ button.forth-button {
     height: 640px;
   }
 }
+@media (max-width: 620px) {
+  .about-us {
+    padding-top: 18px;
+    height: auto;
+    padding-bottom: 11px;
+    border-bottom: none;
+  }
+}
 .about-us h1 {
   color: #666d89;
   font-size: 3rem;
@@ -481,6 +638,11 @@ button.forth-button {
   margin-bottom: 9px;
   padding-top: 2px;
 }
+@media (max-width: 620px) {
+  .about-us p {
+    letter-spacing: 0.2px;
+  }
+}
 
 .articles {
   display: flex;
@@ -493,8 +655,18 @@ button.forth-button {
     margin-top: 38px;
   }
 }
+@media (max-width: 620px) {
+  .articles {
+    margin-top: 24px;
+  }
+}
 .articles article {
   width: 32%;
+}
+@media (max-width: 620px) {
+  .articles article {
+    width: 100%;
+  }
 }
 .articles article > img {
   width: 100%;
@@ -503,6 +675,11 @@ button.forth-button {
 @media (max-width: 768px) {
   .articles article > img {
     margin-bottom: -5px;
+  }
+}
+@media (max-width: 620px) {
+  .articles article > img {
+    margin-bottom: 0px;
   }
 }
 .articles article h2 {
@@ -548,6 +725,11 @@ button.forth-button {
     margin-top: 13px;
   }
 }
+@media (max-width: 620px) {
+  .social-links {
+    margin-bottom: 34px;
+  }
+}
 
 .articles .first {
   margin-left: 1px;
@@ -568,6 +750,12 @@ button.forth-button {
 @media (max-width: 768px) {
   .get-a-quote {
     padding-top: 24px;
+  }
+}
+@media (max-width: 620px) {
+  .get-a-quote {
+    padding-top: 29px;
+    border-bottom: none;
   }
 }
 .get-a-quote h1 {
@@ -602,6 +790,13 @@ button.forth-button {
     padding-bottom: 41px;
   }
 }
+@media (max-width: 620px) {
+  .form-block {
+    grid-template-columns: 1fr;
+    margin-top: 23px;
+    padding-bottom: 40px;
+  }
+}
 
 form {
   display: grid;
@@ -611,6 +806,11 @@ form {
 @media (max-width: 768px) {
   form {
     grid-gap: 12px;
+  }
+}
+@media (max-width: 620px) {
+  form {
+    margin-left: -2px;
   }
 }
 form .form-modal-wrapper {
@@ -624,6 +824,15 @@ form .form-modal-wrapper {
   color: #f2f2f2;
   font-family: Lato;
   padding: 3% 3% 5% 3%;
+  z-index: 100;
+}
+@media (max-width: 620px) {
+  form .form-modal-wrapper {
+    left: 10%;
+    top: 10%;
+    height: 70%;
+    width: 80%;
+  }
 }
 form .form-modal-wrapper button {
   outline: none;
@@ -644,7 +853,7 @@ form .form-modal-wrapper .form-modal {
   overflow-x: hidden;
   overflow-y: auto;
   word-wrap: break-word;
-  height: 100%;
+  height: 90%;
 }
 form .form-modal-wrapper .form-modal p {
   margin: 2px;
@@ -695,6 +904,14 @@ form input[name=submit] {
 @media (max-width: 768px) {
   form input[name=submit] {
     margin-top: 5px;
+  }
+}
+@media (max-width: 620px) {
+  form input[name=submit] {
+    max-width: none;
+    width: 100%;
+    height: 50px;
+    margin-top: 2px;
   }
 }
 form input[name=submit]:hover {
@@ -789,12 +1006,24 @@ form textarea:focus::placeholder {
 .location {
   margin-left: 4px;
 }
+@media (max-width: 620px) {
+  .location {
+    margin-left: 0px;
+    margin-bottom: 6px;
+  }
+}
 .location span {
   margin-left: 10px;
 }
 
 .phone {
   margin-left: 2px;
+}
+@media (max-width: 620px) {
+  .phone {
+    margin-left: 0px;
+    margin-bottom: 6px;
+  }
 }
 .phone span {
   margin-left: 9px;
@@ -820,6 +1049,11 @@ form textarea:focus::placeholder {
 
 .link-section {
   margin: 0 auto;
+}
+@media (max-width: 620px) {
+  .link-section {
+    padding-right: 22px;
+  }
 }
 .link-section a {
   margin-left: 6px;
