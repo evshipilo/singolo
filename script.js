@@ -9,80 +9,167 @@ window.setTimeout(startScroll, 100);
 
 //-----------------scroll to sections
 
-const arrHeaderLinks = document.querySelectorAll('.header-navigation a');
-window.setTimeout(()=>{arrHeaderLinks.forEach(element => element.classList.remove('header-navigation_onclick'));
-    arrHeaderLinks[0].classList.add('header-navigation_onclick');
-}, 100);
+{
+    const arrHeaderLinks = document.querySelectorAll('.header-navigation a');
+    window.setTimeout(() => {
+        arrHeaderLinks.forEach(element => element.classList.remove('header-navigation_onclick'));
+        arrHeaderLinks[0].classList.add('header-navigation_onclick');
+    }, 100);
 
 
-document.querySelector('.header-navigation ul').onclick = function (event) {
-    document.onscroll=null;
-    for (let i = 0; i < arrHeaderLinks.length; i++) {
-        if (event.target == arrHeaderLinks[i]) {
-            arrHeaderLinks.forEach(element => element.classList.remove('header-navigation_onclick'));
-            arrHeaderLinks[i].classList.add('header-navigation_onclick');
-            event.preventDefault();
-            if (i == 0) {
-                document.querySelector('.point1').scrollIntoView({
-                    block: "end",
-                    inline: "nearest",
-                    behavior: "smooth"
-                });
-            }
-            if (i == 1) {
-                document.querySelector('.point2').scrollIntoView({
-                    block: "start",
-                    inline: "nearest",
-                    behavior: "smooth"
-                });
-            }
-            if (i == 2) {
-                document.querySelector('.point3').scrollIntoView({
-                    block: "start",
-                    inline: "nearest",
-                    behavior: "smooth"
-                });
-            }
-            if (i == 3) {
-                document.querySelector('.point4').scrollIntoView({
-                    block: "start",
-                    inline: "nearest",
-                    behavior: "smooth"
-                });
-            }
-            if (i == 4) {
-                document.querySelector('.point5').scrollIntoView({
-                    block: "start",
-                    inline: "nearest",
-                    behavior: "smooth"
-                });
+    document.querySelector('.header-navigation ul').onclick = function (event) {
+        console.log(event.target);
+        document.onscroll = null;
+        for (let i = 0; i < arrHeaderLinks.length; i++) {
+            if (event.target == arrHeaderLinks[i]) {
+                arrHeaderLinks.forEach(element => element.classList.remove('header-navigation_onclick'));
+                arrHeaderLinks[i].classList.add('header-navigation_onclick');
+                event.preventDefault();
+                if (i == 0) {
+                    document.querySelector('.point1').scrollIntoView({
+                        block: "end",
+                        inline: "nearest",
+                        behavior: "smooth"
+                    });
+                }
+                if (i == 1) {
+                    document.querySelector('.point2').scrollIntoView({
+                        block: "start",
+                        inline: "nearest",
+                        behavior: "smooth"
+                    });
+                }
+                if (i == 2) {
+                    document.querySelector('.point3').scrollIntoView({
+                        block: "start",
+                        inline: "nearest",
+                        behavior: "smooth"
+                    });
+                }
+                if (i == 3) {
+                    document.querySelector('.point4').scrollIntoView({
+                        block: "start",
+                        inline: "nearest",
+                        behavior: "smooth"
+                    });
+                }
+                if (i == 4) {
+                    document.querySelector('.point5').scrollIntoView({
+                        block: "start",
+                        inline: "nearest",
+                        behavior: "smooth"
+                    });
+                }
             }
         }
-    }
 
-    window.setTimeout(()=>{document.onscroll=onScroll}, 1000);
-    //document.onscroll=null;
-}
+        window.setTimeout(() => {
+            document.onscroll = onScroll
+        }, 1000);
+        //document.onscroll=null;
+    }
 //----menu item light depends to scroll
-document.onscroll=onScroll;
-    function onScroll(){
-    let rect1=document.querySelector('.point1').getBoundingClientRect().y;
-    let rect2=document.querySelector('.point2').getBoundingClientRect().y;
-    let rect3=document.querySelector('.point3').getBoundingClientRect().y;
-    let rect4=document.querySelector('.point4').getBoundingClientRect().y;
-    let rect5=document.querySelector('.point5').getBoundingClientRect().y;
-    let rectArr=[rect1,rect2,rect3,rect4,rect5,10000];
-    for (let i=0; i<5; i++){
-        if((rectArr[i]-95)<0 && (rectArr[i+1]-95)>0 ){
-            arrHeaderLinks.forEach(element => element.classList.remove('header-navigation_onclick'));
-            arrHeaderLinks[i].classList.add('header-navigation_onclick');
+    document.onscroll = onScroll;
+
+    function onScroll() {
+        let rect1 = document.querySelector('.point1').getBoundingClientRect().y;
+        let rect2 = document.querySelector('.point2').getBoundingClientRect().y;
+        let rect3 = document.querySelector('.point3').getBoundingClientRect().y;
+        let rect4 = document.querySelector('.point4').getBoundingClientRect().y;
+        let rect5 = document.querySelector('.point5').getBoundingClientRect().y;
+        let rectArr = [rect1, rect2, rect3, rect4, rect5, 10000];
+        for (let i = 0; i < 5; i++) {
+            if ((rectArr[i] - 95) < 0 && (rectArr[i + 1] - 95) > 0) {
+                arrHeaderLinks.forEach(element => element.classList.remove('header-navigation_onclick'));
+                arrHeaderLinks[i].classList.add('header-navigation_onclick');
+            }
+
         }
 
     }
 
 }
+//---------------------------------------------------------------------
+{
+    const arrHeaderLinks = document.querySelectorAll('.hhh a');
+    window.setTimeout(() => {
+        arrHeaderLinks.forEach(element => element.classList.remove('header-navigation_onclick'));
+        arrHeaderLinks[0].classList.add('header-navigation_onclick');
+    }, 100);
 
 
+    document.querySelector('.hhh ul').onclick = function (event) {
+        console.log(event.target);
+        document.onscroll = null;
+        for (let i = 0; i < arrHeaderLinks.length; i++) {
+            if (event.target == arrHeaderLinks[i]) {
+                arrHeaderLinks.forEach(element => element.classList.remove('header-navigation_onclick'));
+                arrHeaderLinks[i].classList.add('header-navigation_onclick');
+                event.preventDefault();
+                if (i == 0) {
+                    document.querySelector('.point1').scrollIntoView({
+                        block: "end",
+                        inline: "nearest",
+                        behavior: "smooth"
+                    });
+                }
+                if (i == 1) {
+                    document.querySelector('.point2').scrollIntoView({
+                        block: "start",
+                        inline: "nearest",
+                        behavior: "smooth"
+                    });
+                }
+                if (i == 2) {
+                    document.querySelector('.point3').scrollIntoView({
+                        block: "start",
+                        inline: "nearest",
+                        behavior: "smooth"
+                    });
+                }
+                if (i == 3) {
+                    document.querySelector('.point4').scrollIntoView({
+                        block: "start",
+                        inline: "nearest",
+                        behavior: "smooth"
+                    });
+                }
+                if (i == 4) {
+                    document.querySelector('.point5').scrollIntoView({
+                        block: "start",
+                        inline: "nearest",
+                        behavior: "smooth"
+                    });
+                }
+            }
+        }
+
+        window.setTimeout(() => {
+            document.onscroll = onScroll
+        }, 1000);
+        //document.onscroll=null;
+    }
+//----menu item light depends to scroll
+    document.onscroll = onScroll;
+
+    function onScroll() {
+        let rect1 = document.querySelector('.point1').getBoundingClientRect().y;
+        let rect2 = document.querySelector('.point2').getBoundingClientRect().y;
+        let rect3 = document.querySelector('.point3').getBoundingClientRect().y;
+        let rect4 = document.querySelector('.point4').getBoundingClientRect().y;
+        let rect5 = document.querySelector('.point5').getBoundingClientRect().y;
+        let rectArr = [rect1, rect2, rect3, rect4, rect5, 10000];
+        for (let i = 0; i < 5; i++) {
+            if ((rectArr[i] - 95) < 0 && (rectArr[i + 1] - 95) > 0) {
+                arrHeaderLinks.forEach(element => element.classList.remove('header-navigation_onclick'));
+                arrHeaderLinks[i].classList.add('header-navigation_onclick');
+            }
+
+        }
+
+    }
+
+}
 
 //--------------change phone pictures
 
