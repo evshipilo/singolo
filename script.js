@@ -313,5 +313,13 @@ if(!document.querySelector('.form-modal-wrapper')) {
     }
 }
 
-
-//document.window.scrollTo(0, 0);
+//--------------------hamburger
+document.querySelector('.hamburger').onclick = function(event){
+    //console.log(event.target);
+    //this.rotate(90);
+   this.classList.toggle('rotate');
+   document.querySelector('.logo a').classList.toggle('move-left');
+   //document.querySelector('.logo').classList.toggle('move-left-logo');
+   document.querySelector('.nav-mobile').classList.toggle('nav-mobile__visible');
+   document.querySelector('.mega-wrapper').classList.toggle('mega-wrapper__visible');
+}
