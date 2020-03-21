@@ -89,7 +89,8 @@ window.setTimeout(startScroll, 100);
     }
 
 }
-//---------------------------------------------------------------------
+//----------------------------------------------------fix double navigation
+// menu in html
 {
     const arrHeaderLinks = document.querySelectorAll('.hhh a');
     window.setTimeout(() => {
@@ -200,12 +201,12 @@ document.querySelector('.mobile_horizontal-unvisible').onclick = function () {
 //------------------------carousel
 //---response
 let sectionWidth;
-sectionWidth=getComputedStyle(document.querySelector('.section')).width.split('px')[0];
-document.querySelector('.section').style.height=`${+sectionWidth*0.588}px`;
-window.onresize = function( event ) {
-   // console.log(sectionWidth);
-    sectionWidth=getComputedStyle(document.querySelector('.section')).width.split('px')[0];
-    document.querySelector('.section').style.height=`${+sectionWidth*0.588}px`;
+sectionWidth = getComputedStyle(document.querySelector('.section')).width.split('px')[0];
+document.querySelector('.section').style.height = `${+sectionWidth * 0.588}px`;
+window.onresize = function (event) {
+    // console.log(sectionWidth);
+    sectionWidth = getComputedStyle(document.querySelector('.section')).width.split('px')[0];
+    document.querySelector('.section').style.height = `${+sectionWidth * 0.588}px`;
 };
 //-----end response
 
@@ -230,10 +231,10 @@ function animateFramesLeft() {
 //     console.log(sectionWidth+'----w');
 // console.log(firstFrameLeft+' -----1');
 // console.log(secondFrameLeft+'-----2');
-    if (+firstFrameLeft < -10 ) firstFrameLeft = 100;  //--- -10 because
+    if (+firstFrameLeft < -10) firstFrameLeft = 100;  //--- -10 because
     // chrome dont want 0 )))
-    if (+firstFrameLeft == 0 ) firstFrameLeft = 0;
-    if (+firstFrameLeft > 10 ) firstFrameLeft = 100;
+    if (+firstFrameLeft == 0) firstFrameLeft = 0;
+    if (+firstFrameLeft > 10) firstFrameLeft = 100;
     if (+secondFrameLeft < -10) secondFrameLeft = 100;
     if (+secondFrameLeft == 0) secondFrameLeft = 0;
     if (+secondFrameLeft > 10) secondFrameLeft = 100;
@@ -375,8 +376,8 @@ document.querySelector('form').onsubmit = function (event) {
     const descriptionMessage = formA.elements.detail.value ? formA.elements.detail.value : '';
     const descriptionMessageStrong = formA.elements.detail.value ? 'Description: ' : 'Without' +
         ' description';
-if(!document.querySelector('.form-modal-wrapper')) {
-    formA.insertAdjacentHTML("afterbegin", `<div class="form-modal-wrapper">
+    if (!document.querySelector('.form-modal-wrapper')) {
+        formA.insertAdjacentHTML("afterbegin", `<div class="form-modal-wrapper">
     <div class="form-modal">
     <p style="color: #d6564f"><strong>The letter was sent</strong></p>
     <p><strong>${subjectMessageStrong}</strong> ${subjectMessage}</p>
@@ -384,15 +385,15 @@ if(!document.querySelector('.form-modal-wrapper')) {
     </div>
     <button class="modal-button">ok</button>
   </div>`);
-    document.querySelector(".form-modal-wrapper").animate([
-        {opacity: `0`},
-        {opacity: `1`}
-    ], {
-        duration: 1000,
-        easing: "linear",
-        fill: "forwards",
-    });
-}
+        document.querySelector(".form-modal-wrapper").animate([
+            {opacity: `0`},
+            {opacity: `1`}
+        ], {
+            duration: 1000,
+            easing: "linear",
+            fill: "forwards",
+        });
+    }
     document.querySelector(".modal-button").onclick = function (event) {
         document.querySelector(".form-modal-wrapper").remove();
         document.querySelector('form').reset()
@@ -401,12 +402,12 @@ if(!document.querySelector('.form-modal-wrapper')) {
 }
 
 //--------------------hamburger
-document.querySelector('.hamburger').onclick = function(event){
+document.querySelector('.hamburger').onclick = function (event) {
     //console.log(event.target);
     //this.rotate(90);
-   this.classList.toggle('rotate');
-   document.querySelector('.logo a').classList.toggle('move-left');
-   //document.querySelector('.logo').classList.toggle('move-left-logo');
-   document.querySelector('.nav-mobile').classList.toggle('nav-mobile__visible');
-   document.querySelector('.mega-wrapper').classList.toggle('mega-wrapper__visible');
+    this.classList.toggle('rotate');
+    document.querySelector('.logo a').classList.toggle('move-left');
+    //document.querySelector('.logo').classList.toggle('move-left-logo');
+    document.querySelector('.nav-mobile').classList.toggle('nav-mobile__visible');
+    document.querySelector('.mega-wrapper').classList.toggle('mega-wrapper__visible');
 }
