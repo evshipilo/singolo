@@ -102,7 +102,7 @@ window.setTimeout(() => {
 
 
 document.querySelector('.hhh ul').onclick = function (event) {
-    console.log(event.target);
+    //console.log(event.target);
     document.onscroll = null;
     for (let i = 0; i < arrHeaderLinksMobile.length; i++) {
         if (event.target == arrHeaderLinksMobile[i]) {
@@ -148,6 +148,7 @@ document.querySelector('.hhh ul').onclick = function (event) {
     }
 
     window.setTimeout(() => {
+        console.log('asd');
         document.onscroll = onScroll
     }, 1000);
     //document.onscroll=null;

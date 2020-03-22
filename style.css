@@ -267,11 +267,6 @@ button:hover img {
   filter: hue-rotate(250deg);
   transition: 0.5s;
 }
-button:active img {
-  cursor: pointer;
-  filter: hue-rotate(150deg);
-  transition: 0.1s;
-}
 
 .left-btn {
   position: absolute;
