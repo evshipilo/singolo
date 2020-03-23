@@ -207,6 +207,7 @@ header {
 @media (max-width: 767px) {
   .header-navigation ul li {
     display: block;
+    margin-top: 28px;
   }
 }
 .header-navigation ul li span {
@@ -852,12 +853,13 @@ button.forth-button {
 }
 @media (max-width: 1019px) {
   .social-links {
-    margin-top: 13px;
+    margin-top: 11px;
   }
 }
 @media (max-width: 767px) {
   .social-links {
     margin-bottom: 34px;
+    margin-top: 13px;
   }
 }
 
@@ -959,23 +961,25 @@ form {
 }
 form .form-modal-wrapper {
   position: fixed;
-  left: 30%;
+  left: calc(50% - 200px);
   top: 20%;
   height: 50%;
-  width: 30%;
+  width: 400px;
   background: #2d303a;
+  border: 1px solid #f2f2f2;
   border-radius: 5px;
   color: #f2f2f2;
   font-family: Lato;
-  padding: 3% 3% 5% 3%;
+  padding: 1% 1% 2% 2%;
   z-index: 100;
 }
 @media (max-width: 767px) {
   form .form-modal-wrapper {
-    left: 10%;
+    left: 7%;
     top: 10%;
     height: 70%;
     width: 80%;
+    padding: 1% 1% 4% 2%;
   }
 }
 form .form-modal-wrapper button {
@@ -988,6 +992,7 @@ form .form-modal-wrapper button {
   max-width: 20%;
   cursor: pointer;
   font-size: 1.8rem;
+  margin-top: 10px;
 }
 @media (hover: hover) {
   form .form-modal-wrapper button:hover {
@@ -1096,6 +1101,7 @@ form textarea {
 @media (max-width: 1019px) {
   form textarea {
     height: 152px;
+    padding-left: 10px;
   }
 }
 @media (max-width: 767px) {
