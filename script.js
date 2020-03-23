@@ -104,6 +104,10 @@ window.setTimeout(() => {
 document.querySelector('.hhh ul').onclick = function (event) {
     //console.log(event.target);
     document.onscroll = null;
+    document.querySelector('.hamburger').classList.toggle('rotate');
+    document.querySelector('.logo a').classList.toggle('move-left');
+    document.querySelector('.nav-mobile').classList.toggle('nav-mobile__visible');
+    document.querySelector('.mega-wrapper').classList.toggle('mega-wrapper__visible');
     for (let i = 0; i < arrHeaderLinksMobile.length; i++) {
         if (event.target == arrHeaderLinksMobile[i]) {
             arrHeaderLinksMobile.forEach(element => element.classList.remove('header-navigation_onclick'));
