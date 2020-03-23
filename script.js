@@ -206,7 +206,6 @@ let sectionWidth;
 sectionWidth = getComputedStyle(document.querySelector('.section')).width.split('px')[0];
 document.querySelector('.section').style.height = `${+sectionWidth * 0.588}px`;
 window.onresize = function (event) {
-    // console.log(sectionWidth);
     sectionWidth = getComputedStyle(document.querySelector('.section')).width.split('px')[0];
     document.querySelector('.section').style.height = `${+sectionWidth * 0.588}px`;
 };

@@ -85,9 +85,11 @@ header {
   transition: all 0.5s;
   z-index: 100;
 }
-.hamburger:hover span {
-  transition: all 0.3s;
-  background: #f06c64;
+@media (hover: hover) {
+  .hamburger:hover span {
+    transition: all 0.3s;
+    background: #f06c64;
+  }
 }
 .hamburger span {
   position: absolute;
@@ -152,13 +154,15 @@ header {
   margin-left: -4px;
   color: #f06c64;
 }
-.logo a:hover {
-  color: #f06c64;
-  transition: 0.5s;
-}
-.logo a:hover span {
-  color: #ffffff;
-  transition: 0.5s;
+@media (hover: hover) {
+  .logo a:hover {
+    color: #f06c64;
+    transition: 0.5s;
+  }
+  .logo a:hover span {
+    color: #ffffff;
+    transition: 0.5s;
+  }
 }
 
 @media (max-width: 630px) {
@@ -237,9 +241,11 @@ header {
     letter-spacing: -0.035em;
   }
 }
-.header-navigation ul li a:hover {
-  color: #eb5055;
-  transition: 0.5s;
+@media (hover: hover) {
+  .header-navigation ul li a:hover {
+    color: #eb5055;
+    transition: 0.5s;
+  }
 }
 .header-navigation ul li:first-child {
   margin-left: -1px;
@@ -262,10 +268,12 @@ button {
   outline: none;
   background: none;
 }
-button:hover img {
-  cursor: pointer;
-  filter: hue-rotate(250deg);
-  transition: 0.5s;
+@media (hover: hover) {
+  button:hover img {
+    cursor: pointer;
+    filter: hue-rotate(250deg);
+    transition: 0.5s;
+  }
 }
 
 .left-btn {
@@ -633,9 +641,11 @@ html {
     margin-left: 8px;
   }
 }
-.portfolio button:hover {
-  color: #dedede;
-  border: 1px solid #c5c5c5;
+@media (hover: hover) {
+  .portfolio button:hover {
+    color: #dedede;
+    border: 1px solid #c5c5c5;
+  }
 }
 
 .gallery-button_onclick {
@@ -852,9 +862,11 @@ button.forth-button {
 .articles img {
   margin-right: 6px;
 }
-.articles a:hover img {
-  filter: brightness(30%);
-  transition: 0.3s;
+@media (hover: hover) {
+  .articles a:hover img {
+    filter: brightness(30%);
+    transition: 0.3s;
+  }
 }
 
 .get-a-quote {
@@ -972,9 +984,11 @@ form .form-modal-wrapper button {
   cursor: pointer;
   font-size: 1.8rem;
 }
-form .form-modal-wrapper button:hover {
-  color: #2d303a;
-  transition: color 0.3s;
+@media (hover: hover) {
+  form .form-modal-wrapper button:hover {
+    color: #2d303a;
+    transition: color 0.3s;
+  }
 }
 form .form-modal-wrapper .form-modal {
   overflow-x: hidden;
@@ -1041,8 +1055,10 @@ form input[name=submit] {
     margin-top: 4px;
   }
 }
-form input[name=submit]:hover {
-  border: 2px solid #f2f2f2;
+@media (hover: hover) {
+  form input[name=submit]:hover {
+    border: 2px solid #f2f2f2;
+  }
 }
 form input:invalid {
   color: #666d89;
@@ -1128,8 +1144,10 @@ form textarea:focus::placeholder {
   color: #f0d8d9;
   text-decoration: none;
 }
-.contact-wrapper div a:hover {
-  color: #f2f2f2;
+@media (hover: hover) {
+  .contact-wrapper div a:hover {
+    color: #f2f2f2;
+  }
 }
 
 .location {
@@ -1198,9 +1216,11 @@ form textarea:focus::placeholder {
 .link-section a {
   margin-left: 6px;
 }
-.link-section a:hover {
-  filter: invert(100%);
-  transition: 0.3s;
+@media (hover: hover) {
+  .link-section a:hover {
+    filter: invert(100%);
+    transition: 0.3s;
+  }
 }
 
 .point2, .point3, .point4, .point5 {
