@@ -18,8 +18,7 @@ window.setTimeout(() => {
 
 
 document.querySelector('.jjj ul').onclick = function (event) {
-    //console.log(event.target);
-    document.onscroll = null;
+    //document.onscroll = null;  //---disable menu lights
     for (let i = 0; i < arrHeaderLinks.length; i++) {
         if (event.target == arrHeaderLinks[i]) {
             arrHeaderLinks.forEach(element => element.classList.remove('header-navigation_onclick'));
@@ -63,10 +62,10 @@ document.querySelector('.jjj ul').onclick = function (event) {
         }
     }
 
-    window.setTimeout(() => {
-        document.onscroll = onScroll
-    }, 1000);
-    //document.onscroll=null;
+    // window.setTimeout(() => {                //---unable menu lights
+    //     document.onscroll = onScroll
+    // }, 1000);
+
 }
 //----menu item light depends to scroll
 document.onscroll = onScroll;
