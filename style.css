@@ -257,6 +257,10 @@ header {
   color: #eb5055 !important;
 }
 
+.header-navigation_onclick-additional {
+  color: #eb5055 !important;
+}
+
 .section {
   box-sizing: border-box;
   height: 600px;

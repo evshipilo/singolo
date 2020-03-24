@@ -18,12 +18,16 @@ window.setTimeout(() => {
 
 
 document.querySelector('.jjj ul').onclick = function (event) {
-    //console.log(event.target);
-    document.onscroll = null;
+    //document.onscroll = null;  //---disable menu lights
     for (let i = 0; i < arrHeaderLinks.length; i++) {
         if (event.target == arrHeaderLinks[i]) {
-            arrHeaderLinks.forEach(element => element.classList.remove('header-navigation_onclick'));
+            //arrHeaderLinks.forEach(element =>
+            // element.classList.remove('header-navigation_onclick'));
             arrHeaderLinks[i].classList.add('header-navigation_onclick');
+            arrHeaderLinks[i].classList.add('header-navigation_onclick-additional');//additional light menu button until jump to secton
+            window.setTimeout(() => {
+                arrHeaderLinks[i].classList.remove('header-navigation_onclick-additional');//remove additional light
+            }, 1000);
             event.preventDefault();
             if (i == 0) {
                 document.querySelector('.point1').scrollIntoView({
@@ -62,11 +66,10 @@ document.querySelector('.jjj ul').onclick = function (event) {
             }
         }
     }
+    // window.setTimeout(() => {                //---unable menu lights
+    //     document.onscroll = onScroll
+    // }, 1000);
 
-    window.setTimeout(() => {
-        document.onscroll = onScroll
-    }, 1000);
-    //document.onscroll=null;
 }
 //----menu item light depends to scroll
 document.onscroll = onScroll;
